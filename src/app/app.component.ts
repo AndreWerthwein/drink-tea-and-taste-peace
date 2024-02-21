@@ -8,11 +8,6 @@ import * as selectBoxData from './shared-data/select-box.data';
 })
 export class AppComponent {
   title = 'drink-tea-taste-peace';
-  sizes: Array<string> = [];
-  clarity: Array<string> = [];
 
-  constructor() {
-    this.sizes = selectBoxData.LEAF_SIZE;
-    this.clarity = selectBoxData.INFUSION_CLARITY;
-  }
+  constructor() {}
 }

@@ -1,0 +1,10 @@
+@import "sizes";
+
+:host {
+  display: block;
+
+  & > label {
+    display: block;
+    margin: 0 0 $base__size--xxs 0;
+  }
+}

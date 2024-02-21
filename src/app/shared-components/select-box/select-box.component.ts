@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'select-box',
@@ -8,4 +8,11 @@ import { Component, Input } from '@angular/core';
 export class SelectBoxComponent {
   @Input() label: string = '';
   @Input() options: Array<string> = [];
+  @Output() selected: EventEmitter<string> = new EventEmitter<string>();
+
+  selection: string = 'PLEASE_SELECT';
+
+  onSelect(): void {
+    this.selected.emit(this.selection);
+  } // emits selected value
 }
