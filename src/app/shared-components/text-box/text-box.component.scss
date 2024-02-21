@@ -1,0 +1,13 @@
+@import "sizes";
+
+:host {
+  display: block;
+
+  & > label {
+    & > textarea {
+      display: block;
+      margin: $base__size--xxs 0 0 0;
+      resize: none;
+    }
+  }
+}
