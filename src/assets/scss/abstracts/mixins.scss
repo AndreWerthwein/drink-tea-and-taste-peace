@@ -1,0 +1,41 @@
+@import "sizes";
+
+@mixin material-icons__resize($size) {
+  font-size: $size;
+  width: $size;
+  height: $size;
+}
+
+@mixin text__list {
+  list-style-type: "—";
+  margin: $base__size--m 0 $base__size--m $base__size--m;
+
+  & > li {
+    padding: 0 0 0 $base__size--xs;
+  }
+}
+
+@mixin background-image__settings($color) {
+  background-color: $color;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin single__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin single__center--start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin single__center--end {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
