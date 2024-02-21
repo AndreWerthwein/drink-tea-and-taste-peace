@@ -1,0 +1,17 @@
+<!-- ?? label might not always be desired -->
+@if(label){
+<label>{{ label }}</label>
+}
+
+<div>
+  <input
+    [(ngModel)]="selection"
+    (change)="onSelect()"
+    min="0"
+    max="7"
+    step="1"
+    type="range"
+  />
+  <!-- ?? currently chosen value -->
+  <p>{{ selection }}</p>
+</div>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as selectBoxData from './shared-data/select-box.data';
 
 @Component({
   selector: 'app-root',

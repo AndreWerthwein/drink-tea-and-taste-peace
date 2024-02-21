@@ -1,0 +1,19 @@
+@import "sizes";
+@import "mixins";
+
+:host {
+  display: block;
+
+  & > label {
+    display: block;
+    margin: 0 0 $base__size--xxs 0;
+  }
+
+  & > div {
+    @include single__center--start;
+
+    & > p {
+      margin: 0 0 0 $base__size--xs;
+    }
+  }
+}
