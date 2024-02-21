@@ -7,6 +7,7 @@ import { SelectBoxComponent } from './select-box/select-box.component';
 import { EvaluationRangeComponent } from './evaluation-range/evaluation-range.component';
 import { TextBoxComponent } from './text-box/text-box.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { NumberInputComponent } from './number-input/number-input.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { TextInputComponent } from './text-input/text-input.component';
     EvaluationRangeComponent,
     TextBoxComponent,
     TextInputComponent,
+    NumberInputComponent,
   ],
   imports: [CommonModule, FormsModule],
   exports: [
@@ -21,6 +23,7 @@ import { TextInputComponent } from './text-input/text-input.component';
     EvaluationRangeComponent,
     TextBoxComponent,
     TextInputComponent,
+    NumberInputComponent,
   ],
 })
 export class SharedComponentsModule {}

@@ -1,0 +1,14 @@
+@import "sizes";
+
+:host {
+  display: block;
+
+  & > label {
+    & > input {
+      display: block;
+      width: 100%;
+      margin: $base__size--xxs 0 0 0;
+      resize: none;
+    }
+  }
+}

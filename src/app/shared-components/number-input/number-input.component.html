@@ -1,0 +1,11 @@
+<label>
+  {{ label }}
+  <input
+    [placeholder]="placeholder"
+    [(ngModel)]="input"
+    (ngModelChange)="onInput()"
+    min="0"
+    step="1"
+    type="number"
+  />
+</label>
