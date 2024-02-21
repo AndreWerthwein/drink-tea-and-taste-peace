@@ -1,0 +1,9 @@
+<label>
+  {{ label }}
+  <input
+    [placeholder]="placeholder"
+    [(ngModel)]="input"
+    (ngModelChange)="onInput()"
+    type="text"
+  />
+</label>
