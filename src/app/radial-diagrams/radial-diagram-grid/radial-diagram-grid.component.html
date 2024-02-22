@@ -1,0 +1,35 @@
+<svg [attr.width]="size" [attr.height]="size">
+  <!-- ?? cross-hair to mark the center -->
+  <line
+    [attr.x1]="size / 2"
+    [attr.y1]="size / 2 - 4"
+    [attr.x2]="size / 2"
+    [attr.y2]="size / 2 + 4"
+    stroke-width="1"
+  />
+  <line
+    [attr.x1]="size / 2 - 4"
+    [attr.y1]="size / 2"
+    [attr.x2]="size / 2 + 4"
+    [attr.y2]="size / 2"
+  />
+
+  @for(x of xOnRadialLine; track x; let i = $index) {
+  <line
+    [attr.x1]="size / 2"
+    [attr.y1]="size / 2"
+    [attr.x2]="xOnRadialLine[i]"
+    [attr.y2]="yOnRadialLine[i]"
+  />
+  }
+
+  <!-- ?? circles to mark values of evaluation-range -->
+  @for(circle of radialLines; track circle){
+  <circle
+    [attr.cx]="size / 2"
+    [attr.cy]="size / 2"
+    [attr.r]="circle"
+    stroke-width="1"
+  />
+  }
+</svg>

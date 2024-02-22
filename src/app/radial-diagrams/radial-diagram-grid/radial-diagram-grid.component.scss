@@ -1,0 +1,20 @@
+@import "sizes";
+
+:host {
+  display: block;
+  padding: $base__size--m;
+
+  & > svg {
+    background-color: white;
+
+    & > circle {
+      fill: none;
+      stroke: black;
+    }
+
+    & > line {
+      fill: none;
+      stroke: black;
+    }
+  }
+}
