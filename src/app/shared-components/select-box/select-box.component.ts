@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./select-box.component.scss'],
 })
 export class SelectBoxComponent {
-  @Input() label: string = '';
+  @Input() label: string;
   @Input() options: Array<string> = [];
   @Output() selected: EventEmitter<string> = new EventEmitter<string>();
 

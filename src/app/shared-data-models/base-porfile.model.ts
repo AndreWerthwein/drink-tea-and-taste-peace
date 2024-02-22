@@ -1,6 +1,6 @@
 import { EvaluationRange } from '../shared-types/evaluation.types';
 
-export interface BaseProfile {
+export interface BaseProfileModel {
   Fresh: EvaluationRange;
   Sour: EvaluationRange;
   Bitter: EvaluationRange;
@@ -18,17 +18,17 @@ export interface BaseProfile {
   Umami: EvaluationRange;
 }
 
-export interface LeavesBaseProfile {
-  Odor: BaseProfile;
+export interface LeavesBaseProfileModel {
+  Odor: BaseProfileModel;
   Comment: Array<string>;
 }
 
-export interface InfusionBaseProfile {
-  Odor: BaseProfile;
+export interface InfusionBaseProfileModel {
+  Odor: BaseProfileModel;
   Comment: Array<string>;
 }
 
-export interface TeaBaseProfile {
-  Taste: BaseProfile;
+export interface TeaBaseProfileModel {
+  Taste: BaseProfileModel;
   Comment: Array<string>;
 }

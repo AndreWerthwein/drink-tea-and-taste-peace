@@ -1,13 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+// models
+import { InputFieldBaseModel } from 'src/app/shared-component-models/input-fields.model';
+
 @Component({
   selector: 'text-box',
   templateUrl: './text-box.component.html',
   styleUrl: './text-box.component.scss',
 })
 export class TextBoxComponent {
-  @Input() label: string = '';
-  @Input() placeholder: string = '';
+  @Input() configuration: InputFieldBaseModel;
   @Output() userInput: EventEmitter<string> = new EventEmitter<string>();
 
   input: string = '';

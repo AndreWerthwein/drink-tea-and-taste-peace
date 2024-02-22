@@ -1,7 +1,7 @@
 <label>
-  {{ label }}
+  {{ configuration.Label }}
   <textarea
-    [placeholder]="placeholder"
+    [placeholder]="configuration.Placeholder"
     [(ngModel)]="input"
     (ngModelChange)="onInput()"
   ></textarea>

@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './evaluation-range.component.scss',
 })
 export class EvaluationRangeComponent {
-  @Input() label: string = '';
+  @Input() label: string;
   @Output() selected: EventEmitter<number> = new EventEmitter<number>();
 
   selection: number = 0;

@@ -1,13 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+// models
+import { InputFieldBaseModel } from 'src/app/shared-component-models/input-fields.model';
+
 @Component({
   selector: 'number-input',
   templateUrl: './number-input.component.html',
   styleUrl: './number-input.component.scss',
 })
 export class NumberInputComponent {
-  @Input() label: string = '';
-  @Input() placeholder: string = '';
+  @Input() configuration: InputFieldBaseModel;
   @Output() userInput: EventEmitter<number> = new EventEmitter<number>();
 
   input: number = 0;

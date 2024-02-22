@@ -1,6 +1,6 @@
 import { EvaluationRange } from '../shared-types/evaluation.types';
 
-export interface BaseAssociations {
+export interface BaseAssociationsModel {
   Marine: EvaluationRange;
   Nuts: EvaluationRange;
   Spice: EvaluationRange;
@@ -16,13 +16,13 @@ export interface BaseAssociations {
   Comment: Array<string>;
 }
 
-export interface Marine {
+export interface MarineModel {
   Fish: EvaluationRange;
   SeaAir: EvaluationRange;
   Seaweed: EvaluationRange;
 }
 
-export interface Nuts {
+export interface NutsModel {
   Almond: EvaluationRange;
   Chestnut: EvaluationRange;
   Grain: EvaluationRange;
@@ -34,7 +34,7 @@ export interface Nuts {
   RoastedRice: EvaluationRange;
 }
 
-export interface Spice {
+export interface SpiceModel {
   Cardamom: EvaluationRange;
   Cinnamon: EvaluationRange;
   Clove: EvaluationRange;
@@ -47,7 +47,7 @@ export interface Spice {
   Ginger: EvaluationRange;
 }
 
-export interface Sweet {
+export interface SweetModel {
   BurntSugar: EvaluationRange;
   Candy: EvaluationRange;
   Caramel: EvaluationRange;
@@ -60,12 +60,12 @@ export interface Sweet {
   Toffee: EvaluationRange;
 }
 
-export interface Soap {
+export interface SoapModel {
   BarSoap: EvaluationRange;
   Ginger: EvaluationRange;
 }
 
-export interface Vegetal {
+export interface VegetalModel {
   Bamboo: EvaluationRange;
   Cardamom: EvaluationRange;
   Barnyard: EvaluationRange;
@@ -83,7 +83,7 @@ export interface Vegetal {
   Thyme: EvaluationRange;
 }
 
-export interface Char {
+export interface CharModel {
   Ash: EvaluationRange;
   BurntFood: EvaluationRange;
   BurntToast: EvaluationRange;
@@ -96,7 +96,7 @@ export interface Char {
   Tobacco: EvaluationRange;
 }
 
-export interface Earthy {
+export interface EarthyModel {
   Earth: EvaluationRange;
   Barnyard: EvaluationRange;
   Compost: EvaluationRange;
@@ -111,7 +111,7 @@ export interface Earthy {
   WetLeaves: EvaluationRange;
 }
 
-export interface Wood {
+export interface WoodModel {
   Bark: EvaluationRange;
   Camphor: EvaluationRange;
   Cedar: EvaluationRange;
@@ -122,7 +122,7 @@ export interface Wood {
   SawDust: EvaluationRange;
 }
 
-export interface Floral {
+export interface FloralModel {
   CherryBlossom: EvaluationRange;
   Jasmine: EvaluationRange;
   Honeysuckle: EvaluationRange;
@@ -133,7 +133,7 @@ export interface Floral {
   Rose: EvaluationRange;
 }
 
-export interface Fruit {
+export interface FruitModel {
   Berry: EvaluationRange;
   Citrus: EvaluationRange;
   BlackCurrant: EvaluationRange;
@@ -162,7 +162,7 @@ export interface Fruit {
   Plum: EvaluationRange;
 }
 
-export interface Mineral {
+export interface MineralModel {
   Brass: EvaluationRange;
   Flint: EvaluationRange;
   Metallic: EvaluationRange;

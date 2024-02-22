@@ -1,6 +1,6 @@
 import { EvaluationRange } from '../shared-types/evaluation.types';
 
-export interface EvaluationSummary {
+export interface EvaluationSummaryModel {
   Name: string;
   SerialNumber: string;
   Type: Array<string>;

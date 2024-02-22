@@ -1,22 +1,22 @@
-interface Origin {
+interface OriginModel {
   Country?: string;
   City?: string;
   Plantation?: string;
 }
 
-interface Price {
+interface PriceModel {
   Original: number;
   PackagingSize: number;
   Reference: number; // ?? price per 100 g
 }
 
-export interface GeneralInformation {
+export interface GeneralInformationModel {
   Name: string;
   SerialNumber: string;
   Type: Array<string>;
   Ingredients: Array<string>;
   Brand: string;
   Shop?: string;
-  Origin?: Origin;
-  Price: Price;
+  Origin?: OriginModel;
+  Price: PriceModel;
 }
