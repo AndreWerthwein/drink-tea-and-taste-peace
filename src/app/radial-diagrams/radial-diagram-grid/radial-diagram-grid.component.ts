@@ -3,7 +3,9 @@ import {
   ElementRef,
   HostListener,
   Input,
+  OnChanges,
   OnInit,
+  SimpleChanges,
 } from '@angular/core';
 
 // services
@@ -14,21 +16,27 @@ import { GeometryService } from '../diagram-services/geometry.service';
   templateUrl: './radial-diagram-grid.component.html',
   styleUrl: './radial-diagram-grid.component.scss',
 })
-export class RadialDiagramGridComponent implements OnInit {
+export class RadialDiagramGridComponent implements OnInit, OnChanges {
   @Input() numberOfValues: number; // ?? dictates number of segments
+  @Input() size: number;
 
-  size: number;
   radialLines: Array<number>;
   xOnRadialLine: Array<number>;
   yOnRadialLine: Array<number>;
 
-  constructor(
-    private geometryService: GeometryService,
-    private host: ElementRef
-  ) {}
+  constructor(private geometryService: GeometryService) {}
 
   ngOnInit(): void {
     this.drawDiagramGrid();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (
+      changes &&
+      changes['size'].currentValue != changes['size'].previousValue
+    ) {
+      this.drawDiagramGrid();
+    }
   }
 
   @HostListener('window:resize')
@@ -39,11 +47,6 @@ export class RadialDiagramGridComponent implements OnInit {
       this.drawDiagramGrid();
     }, 1500);
   }
-
-  private getSize(): number {
-    const PADDING_X_AXIS: number = 32; // ?? padding-left + padding-right
-    return this.host.nativeElement.offsetWidth - PADDING_X_AXIS;
-  } // returns the size of svg cosidering surrounding spacing
 
   private getRadialLines(size: number): Array<number> {
     // ?? corresponding to the highest value of the 'EvaluationRange'
@@ -83,7 +86,6 @@ export class RadialDiagramGridComponent implements OnInit {
   } // sets 'xOnRadialLine' and 'yOnRadialLine' with x- and y-coordinates
 
   private drawDiagramGrid(): void {
-    this.size = this.getSize();
     this.radialLines = this.getRadialLines(this.size);
     this.setPointsOnRadialLines(this.size);
   } // collects all necessary methods needed to draw the diagram grid
