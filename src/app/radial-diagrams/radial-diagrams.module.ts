@@ -10,6 +10,7 @@ import { RadialDiagramGridComponent } from './radial-diagram-grid/radial-diagram
 // values
 import { RadialDiagramValuesLinesComponent } from './radial-diagram-values-lines/radial-diagram-values-lines.component';
 import { RadialDiagramValuesPolygonComponent } from './radial-diagram-values-polygon/radial-diagram-values-polygon.component';
+import { RadialDiagramValuesPieComponent } from './radial-diagram-values-pie/radial-diagram-values-pie.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RadialDiagramValuesPolygonComponent } from './radial-diagram-values-pol
     RadialDiagramGridComponent,
     RadialDiagramValuesLinesComponent,
     RadialDiagramValuesPolygonComponent,
+    RadialDiagramValuesPieComponent,
   ],
   imports: [CommonModule],
   exports: [RadialDiagramComponent],

@@ -1,12 +1,27 @@
 <radial-diagram-grid [size]="size" [numberOfValues]="test.length" />
+
+<!-- ?? diagram-type: lines -->
 @if(type === 'LINES'){
 <radial-diagram-values-lines
   [size]="size"
   [values]="test"
   [style.marginTop.px]="offsetValues"
-/>} @if(type === 'POLYGON'){
+/>}
+
+<!-- ?? diagram-type: polygon -->
+@if(type === 'POLYGON'){
 <radial-diagram-values-polygon
   [size]="size"
   [values]="test"
   [style.marginTop.px]="offsetValues"
-/>}
+/>
+}
+
+<!-- ?? diagram-type: pie -->
+@if(type === 'PIE'){
+<radial-diagram-values-pie
+  [size]="size"
+  [values]="test"
+  [style.marginTop.px]="offsetValues"
+/>
+}

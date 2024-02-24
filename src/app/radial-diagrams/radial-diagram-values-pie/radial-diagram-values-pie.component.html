@@ -1,0 +1,42 @@
+<svg
+  [attr.width]="size"
+  [attr.height]="size"
+  [attr.viewBox]="'0 0 ' + size + ' ' + size"
+>
+  <!-- ?? wedges: background -->
+  @for(wedge of wedgesBackground; track wedge) {
+  <circle
+    class="wedge__background"
+    [attr.cx]="size / 2"
+    [attr.cy]="size / 2"
+    [attr.r]="wedge.Radius"
+    [attr.stroke-width]="wedge.Radius * 2"
+    [attr.stroke-dasharray]="wedge.DashArray"
+    [style.transform]="'rotate(' + wedge.Angle + 'deg)'"
+  />
+  }
+
+  <!-- ?? wedges: outline -->
+  @for(wedge of wedgesOutline; track wedge) {
+  <circle
+    class="wedge__outline"
+    [attr.cx]="size / 2"
+    [attr.cy]="size / 2"
+    [attr.r]="wedge.Radius"
+    stroke-width="3"
+    [attr.stroke-dasharray]="wedge.DashArray"
+    [style.transform]="'rotate(' + wedge.Angle + 'deg)'"
+  />
+  }
+
+  <!-- ?? connecting lines -->
+  @for(line of connectingLines; track line) {
+  <line
+    [attr.x1]="line.X1"
+    [attr.y1]="line.Y1"
+    [attr.x2]="line.X2"
+    [attr.y2]="line.Y2"
+    stroke-width="3"
+  />
+  }
+</svg>

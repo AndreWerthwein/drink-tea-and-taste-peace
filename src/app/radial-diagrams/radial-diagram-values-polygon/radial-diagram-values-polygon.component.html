@@ -1,3 +1,7 @@
-<svg [attr.width]="size" [attr.height]="size">
+<svg
+  [attr.width]="size"
+  [attr.height]="size"
+  [attr.viewBox]="'0 0 ' + size + ' ' + size"
+>
   <polygon [attr.points]="polygonPoints" stroke-width="3" />
 </svg>

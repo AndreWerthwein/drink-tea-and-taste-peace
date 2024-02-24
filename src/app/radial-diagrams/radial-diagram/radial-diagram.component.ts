@@ -15,7 +15,7 @@ import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
   styleUrl: './radial-diagram.component.scss',
 })
 export class RadialDiagramComponent implements OnInit {
-  @Input() type: 'LINES' | 'POLYGON';
+  @Input() type: 'LINES' | 'POLYGON' | 'PIE';
 
   size: number;
   offsetValues: number;

@@ -1,0 +1,25 @@
+@import "sizes";
+
+:host {
+  display: block;
+
+  & > svg {
+    & > line {
+      fill: none;
+      stroke: purple;
+    }
+
+    & > circle {
+      fill: none;
+      transform-origin: center;
+    }
+
+    .wedge__background {
+      stroke: rgba(purple, 0.3);
+    }
+
+    .wedge__outline {
+      stroke: purple;
+    }
+  }
+}
