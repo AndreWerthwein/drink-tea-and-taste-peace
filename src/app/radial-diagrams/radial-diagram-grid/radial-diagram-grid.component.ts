@@ -37,7 +37,11 @@ export class RadialDiagramGridComponent implements OnInit, OnChanges {
       changes['size'].currentValue != changes['size'].previousValue
     ) {
       this.size = changes['size'].currentValue;
-      this.drawDiagramGrid();
+
+      // todo: add loader to bridge time between recalculations
+      setTimeout(() => {
+        this.drawDiagramGrid();
+      }, 500); // ?? timeout necessary to prevent performance issues due to too many recalculations
     }
   }
 

@@ -19,15 +19,14 @@ export class RadialDiagramComponent implements OnInit {
     this.getSizeAndOffset();
   }
 
-  @HostListener('window:resize')
-  onResize(): void {
-    setTimeout(() => {
-      this.getSizeAndOffset();
-    }, 500); // ?? timeout necessary to prevent performance issues due to too many recalculations
-  } // calls 'getSizeAndOffset' on 'window:resize'
+  private getSmallerSize(): number {
+    let hostElement: HTMLElement = this.host.nativeElement;
+    return Math.min(hostElement.offsetWidth, hostElement.offsetHeight);
+  } // returns either 'width' or 'height' of viewport, which ever is smaller
 
+  @HostListener('window:resize')
   private getSizeAndOffset(): void {
-    this.size = this.host.nativeElement.offsetWidth;
+    this.size = this.getSmallerSize();
     this.offsetValues = this.size * -1 - 1;
   } // returns the size of svg cosidering surrounding spacing
 }

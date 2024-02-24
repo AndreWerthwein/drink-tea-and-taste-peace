@@ -34,7 +34,11 @@ export class RadialDiagramValuesLinesComponent implements OnInit, OnChanges {
       changes['size'].currentValue != changes['size'].previousValue
     ) {
       this.size = changes['size'].currentValue;
-      this.setPointsOnRadialLines();
+
+      // todo: add loader to bridge time between recalculations
+      setTimeout(() => {
+        this.setPointsOnRadialLines();
+      }, 500); // ?? timeout necessary to prevent performance issues due to too many recalculations
     }
 
     // ?? changes on 'values'
