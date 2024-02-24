@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 import { GeometryService } from '../diagram-services/geometry.service';
+import * as diagram from '../radial-diagram/radial-diagram.data';
 
 @Component({
   selector: 'radial-diagram-values-lines',
@@ -29,38 +30,42 @@ export class RadialDiagramValuesLinesComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     // ?? changes on 'size'
     if (
-      changes &&
+      changes['size'] &&
       changes['size'].currentValue != changes['size'].previousValue
     ) {
+      this.size = changes['size'].currentValue;
       this.setPointsOnRadialLines();
     }
 
     // ?? changes on 'values'
     if (
-      changes &&
+      changes['values'] &&
       changes['values'].currentValue != changes['values'].previousValue
     ) {
+      this.values = changes['values'].currentValue;
       this.setPointsOnRadialLines();
     }
   }
 
   private setPointsOnRadialLines(): void {
-    const CENTER: number = Math.floor(this.size / 2); // ?? 1px offset so all lines are drawn appropiately
-    const STEP_SIZE: number = Math.floor(360 / this.values.length);
+    const CENTER: number = this.size / 2; // ?? 1px offset so all lines are drawn appropiately
+    const STEP_DEGREE: number = 360 / this.values.length;
+    const STEP_RADIUS: number =
+      (this.size - diagram.PADDING) / diagram.MAXIMUM_VALUE / 2;
     let angle: number = 0;
     let radius: number;
     this.xOnRadialLine = [];
     this.yOnRadialLine = [];
 
     for (let i: number = 0; i < this.values.length; i++) {
-      radius = this.values[i] * STEP_SIZE;
+      radius = this.values[i] * STEP_RADIUS;
       this.xOnRadialLine.push(
         this.geometryService.getXOnRadialLine(CENTER, radius, angle)
       );
       this.yOnRadialLine.push(
         this.geometryService.getYOnRadialLine(CENTER, radius, angle)
       );
-      angle += STEP_SIZE;
+      angle += STEP_DEGREE;
     }
   } // sets 'xOnRadialLine' and 'yOnRadialLine' with x- and y-coordinates
 }

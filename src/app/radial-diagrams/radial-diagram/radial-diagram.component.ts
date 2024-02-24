@@ -1,4 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+
+// models
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 
 @Component({
@@ -14,13 +16,18 @@ export class RadialDiagramComponent implements OnInit {
   constructor(private host: ElementRef) {}
 
   ngOnInit(): void {
-    this.getSize();
+    this.getSizeAndOffset();
   }
 
   @HostListener('window:resize')
-  private getSize(): void {
-    const PADDING_X_AXIS: number = 32; // ?? padding-left + padding-right
-    this.size = this.host.nativeElement.offsetWidth - PADDING_X_AXIS;
+  onResize(): void {
+    setTimeout(() => {
+      this.getSizeAndOffset();
+    }, 500); // ?? timeout necessary to prevent performance issues due to too many recalculations
+  } // calls 'getSizeAndOffset' on 'window:resize'
+
+  private getSizeAndOffset(): void {
+    this.size = this.host.nativeElement.offsetWidth;
     this.offsetValues = this.size * -1 - 1;
   } // returns the size of svg cosidering surrounding spacing
 }
