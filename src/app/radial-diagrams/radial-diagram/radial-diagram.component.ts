@@ -15,16 +15,16 @@ import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
   styleUrl: './radial-diagram.component.scss',
 })
 export class RadialDiagramComponent implements OnInit {
-  @Input() type: 'LINES' | 'POLYGON' | 'PIE';
+  @Input() type: 'LINES' | 'POLYGON' | 'AREA' | undefined;
+  @Input() values: Array<EvaluationRange>;
 
   size: number;
   offsetValues: number;
-  test: Array<EvaluationRange> = [1, 2, 3, 4, 5, 6, 7, 6, 7, 5];
 
   constructor(private host: ElementRef) {}
 
   ngOnInit(): void {
-    if (!this.type) this.type = 'POLYGON';
+    if (!this.type) this.type = 'AREA';
     this.getSizeAndOffset();
   }
 

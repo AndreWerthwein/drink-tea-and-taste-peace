@@ -1,10 +1,10 @@
-<radial-diagram-grid [size]="size" [numberOfValues]="test.length" />
+<radial-diagram-grid [size]="size" [numberOfValues]="values.length" />
 
 <!-- ?? diagram-type: lines -->
 @if(type === 'LINES'){
 <radial-diagram-values-lines
   [size]="size"
-  [values]="test"
+  [values]="values"
   [style.marginTop.px]="offsetValues"
 />}
 
@@ -12,16 +12,16 @@
 @if(type === 'POLYGON'){
 <radial-diagram-values-polygon
   [size]="size"
-  [values]="test"
+  [values]="values"
   [style.marginTop.px]="offsetValues"
 />
 }
 
-<!-- ?? diagram-type: pie -->
-@if(type === 'PIE'){
+<!-- ?? diagram-type: area -->
+@if(type === 'AREA'){
 <radial-diagram-values-area
   [size]="size"
-  [values]="test"
+  [values]="values"
   [style.marginTop.px]="offsetValues"
 />
 }
