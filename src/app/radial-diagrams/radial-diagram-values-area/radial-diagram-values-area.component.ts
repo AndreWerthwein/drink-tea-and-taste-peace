@@ -11,14 +11,14 @@ import * as diagram from '../radial-diagram/radial-diagram.data';
 import {
   DiagramWedgeConnectingLinesModel,
   DiagramWedgeModel,
-} from './radia-diagram-values-pie.model';
+} from './radia-diagram-values-area.model';
 
 @Component({
-  selector: 'radial-diagram-values-pie',
-  templateUrl: './radial-diagram-values-pie.component.html',
-  styleUrl: './radial-diagram-values-pie.component.scss',
+  selector: 'radial-diagram-values-area',
+  templateUrl: './radial-diagram-values-area.component.html',
+  styleUrl: './radial-diagram-values-area.component.scss',
 })
-export class RadialDiagramValuesPieComponent {
+export class RadialDiagramValuesAreaComponent {
   @Input() size: number;
   @Input() values: Array<EvaluationRange>;
 
