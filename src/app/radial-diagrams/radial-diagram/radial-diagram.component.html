@@ -1,6 +1,12 @@
 <radial-diagram-grid [size]="size" [numberOfValues]="test.length" />
+@if(type === 'LINES'){
 <radial-diagram-values-lines
   [size]="size"
   [values]="test"
   [style.marginTop.px]="offsetValues"
-/>
+/>} @if(type === 'POLYGON'){
+<radial-diagram-values-polygon
+  [size]="size"
+  [values]="test"
+  [style.marginTop.px]="offsetValues"
+/>}

@@ -1,0 +1,12 @@
+@import "sizes";
+
+:host {
+  display: block;
+
+  & > svg {
+    & > polygon {
+      fill: rgba(purple, 0.3);
+      stroke: purple;
+    }
+  }
+}

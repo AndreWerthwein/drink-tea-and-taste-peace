@@ -1,4 +1,10 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 // models
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
@@ -9,6 +15,8 @@ import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
   styleUrl: './radial-diagram.component.scss',
 })
 export class RadialDiagramComponent implements OnInit {
+  @Input() type: 'LINES' | 'POLYGON';
+
   size: number;
   offsetValues: number;
   test: Array<EvaluationRange> = [1, 2, 3, 4, 5, 6, 7, 6, 7, 5];
@@ -16,6 +24,7 @@ export class RadialDiagramComponent implements OnInit {
   constructor(private host: ElementRef) {}
 
   ngOnInit(): void {
+    if (!this.type) this.type = 'POLYGON';
     this.getSizeAndOffset();
   }
 

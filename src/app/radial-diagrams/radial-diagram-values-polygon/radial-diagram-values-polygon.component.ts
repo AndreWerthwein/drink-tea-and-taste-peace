@@ -1,10 +1,4 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 // models
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
@@ -16,18 +10,17 @@ import { GeometryService } from '../diagram-services/geometry.service';
 import * as diagram from '../radial-diagram/radial-diagram.data';
 
 @Component({
-  selector: 'radial-diagram-values-lines',
-  templateUrl: './radial-diagram-values-lines.component.html',
-  styleUrl: './radial-diagram-values-lines.component.scss',
+  selector: 'radial-diagram-values-polygon',
+  templateUrl: './radial-diagram-values-polygon.component.html',
+  styleUrl: './radial-diagram-values-polygon.component.scss',
 })
-export class RadialDiagramValuesLinesComponent implements OnInit, OnChanges {
+export class RadialDiagramValuesPolygonComponent {
   @Input() size: number;
   @Input() values: Array<EvaluationRange>;
 
   constructor(private geometryService: GeometryService) {}
 
-  xOnRadialLine: Array<number>;
-  yOnRadialLine: Array<number>;
+  polygonPoints: string = '';
 
   ngOnInit(): void {
     this.setPointsOnRadialLines();
@@ -64,17 +57,17 @@ export class RadialDiagramValuesLinesComponent implements OnInit, OnChanges {
       (this.size - diagram.PADDING) / diagram.MAXIMUM_VALUE / 2;
     let angle: number = 0;
     let radius: number;
-    this.xOnRadialLine = [];
-    this.yOnRadialLine = [];
+    this.polygonPoints = '';
 
     for (let i: number = 0; i < this.values.length; i++) {
       radius = this.values[i] * STEP_RADIUS;
-      this.xOnRadialLine.push(
-        this.geometryService.getXOnRadialLine(CENTER, radius, angle)
-      );
-      this.yOnRadialLine.push(
-        this.geometryService.getYOnRadialLine(CENTER, radius, angle)
-      );
+
+      this.polygonPoints +=
+        this.geometryService.getXOnRadialLine(CENTER, radius, angle) +
+        ',' +
+        this.geometryService.getYOnRadialLine(CENTER, radius, angle) +
+        ' ';
+
       angle += STEP_DEGREE;
     }
   } // sets 'xOnRadialLine' and 'yOnRadialLine' with x- and y-coordinates

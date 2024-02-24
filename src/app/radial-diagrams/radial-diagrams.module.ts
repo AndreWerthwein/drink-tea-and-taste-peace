@@ -9,12 +9,14 @@ import { RadialDiagramGridComponent } from './radial-diagram-grid/radial-diagram
 
 // values
 import { RadialDiagramValuesLinesComponent } from './radial-diagram-values-lines/radial-diagram-values-lines.component';
+import { RadialDiagramValuesPolygonComponent } from './radial-diagram-values-polygon/radial-diagram-values-polygon.component';
 
 @NgModule({
   declarations: [
     RadialDiagramComponent,
     RadialDiagramGridComponent,
     RadialDiagramValuesLinesComponent,
+    RadialDiagramValuesPolygonComponent,
   ],
   imports: [CommonModule],
   exports: [RadialDiagramComponent],
