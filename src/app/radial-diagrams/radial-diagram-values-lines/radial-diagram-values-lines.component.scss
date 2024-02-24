@@ -1,0 +1,12 @@
+@import "sizes";
+
+:host {
+  display: block;
+
+  & > svg {
+    & > line {
+      fill: none;
+      stroke: purple;
+    }
+  }
+}

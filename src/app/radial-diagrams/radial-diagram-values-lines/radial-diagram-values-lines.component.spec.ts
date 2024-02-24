@@ -6,18 +6,17 @@ describe('RadialDiagramValuesLinesComponent', () => {
   let component: RadialDiagramValuesLinesComponent;
   let fixture: ComponentFixture<RadialDiagramValuesLinesComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [RadialDiagramValuesLinesComponent]
-    })
-    .compileComponents();
-    
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [RadialDiagramValuesLinesComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(RadialDiagramValuesLinesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create 'RadialDiagramValuesLinesComponent'", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 
 @Component({
   selector: 'radial-diagram',
@@ -7,6 +8,8 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 })
 export class RadialDiagramComponent implements OnInit {
   size: number;
+  offsetValues: number;
+  test: Array<EvaluationRange> = [1, 2, 3, 4, 5, 6, 7, 6, 7, 5];
 
   constructor(private host: ElementRef) {}
 
@@ -18,5 +21,6 @@ export class RadialDiagramComponent implements OnInit {
   private getSize(): void {
     const PADDING_X_AXIS: number = 32; // ?? padding-left + padding-right
     this.size = this.host.nativeElement.offsetWidth - PADDING_X_AXIS;
+    this.offsetValues = this.size * -1 - 1;
   } // returns the size of svg cosidering surrounding spacing
 }

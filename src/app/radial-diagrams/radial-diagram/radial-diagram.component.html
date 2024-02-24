@@ -1,1 +1,6 @@
-<radial-diagram-grid [size]="size" [numberOfValues]="10" />
+<radial-diagram-grid [size]="size" [numberOfValues]="test.length" />
+<radial-diagram-values-lines
+  [size]="size"
+  [values]="test"
+  [style.marginTop.px]="offsetValues"
+/>
