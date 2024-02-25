@@ -10,3 +10,19 @@ export const GENERAL: GeneralInformationModel = {
   Shop: 'TeeGschwendner',
   Price: { Original: 0, PackagingSize: 'Sample', Reference: 5.5 },
 };
+
+export const PREPARATION: PreparationModel = {
+  Intended: {
+    TeaLeaves: {
+      PerCup: 6,
+      PerPot: 12,
+    },
+    Water: {
+      PerCup: 500,
+      PerPot: 1000,
+    },
+    Temperature: 70,
+    Time: 120,
+  },
+  Infusions: 1,
+};

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { GeneralInformationModel } from './shared-data-models/general-information.model';
-import { CAIPIRINHA_997 } from './tea-data/997-caipirinha.data';
+import { PREPARATION } from './tea-data/997-caipirinha.data';
+import { PreparationModel } from './shared-data-models/preparation.model';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,9 @@ import { CAIPIRINHA_997 } from './tea-data/997-caipirinha.data';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  test: GeneralInformationModel;
+  test: PreparationModel;
 
   constructor() {
-    this.test = CAIPIRINHA_997;
+    this.test = PREPARATION;
   }
 }
