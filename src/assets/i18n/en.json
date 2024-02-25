@@ -1,7 +1,7 @@
 {
   "CLARITY": "Clarity",
   "COLOR": "Color",
-  "AMOUNT_OF_PARTICLES": "Amout of particles",
+  "AMOUNT_OF_PARTICLES": "Amount of particles",
   "AVERAGE_SIZE": "Average size",
   "AVERAGE_SHAPE": "Average shape",
   "AMOUNT_OF_BROKEN_LEAVES": "Amount of broken leaves",
@@ -15,5 +15,7 @@
   "CLEAR": "Clear",
   "SLIGHTLY_HAZY": "Slightly hazy",
   "HAZY": "Hazy",
-  "OPAQUE": "Opaque"
+  "OPAQUE": "Opaque",
+  "PREPARATION_HELP_TITLE": "How many infusions?",
+  "PREPARATION_HELP_EXPLANATION": "This parameter is intended as a hint on how many infuisons are possible with the intended preparation, without the tea losing too much of it's qualities. (So, I basically stopped counting when I couldn't taste the qualities of the tea anymore.) Eventhough this is a very subjective parameter, it gives us an idea of the quality of the tea."
 }

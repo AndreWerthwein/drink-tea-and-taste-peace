@@ -8,6 +8,9 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../app.module';
 import { HttpClient } from '@angular/common/http';
+import { PreparationHelpComponent } from './preparation/preparation-help/preparation-help.component';
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,9 +18,12 @@ import { HttpClient } from '@angular/common/http';
     PreparationComponent,
     AppearanceLeavesComponent,
     AppearanceInfusionComponent,
+    PreparationHelpComponent,
   ],
   imports: [
     CommonModule,
+    MatIconModule,
+    NgbPopoverModule,
     // translation
     TranslateModule.forRoot({
       loader: {

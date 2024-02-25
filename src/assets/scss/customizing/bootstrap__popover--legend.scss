@@ -1,9 +1,39 @@
 @import "sizes";
+@import "mixins";
 
-.popover.user-score__legend {
+// ?? text
+.text__popover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  & > preparation-help {
+    margin: calc(#{$base__size--xs} * (-1)) 0 0 $base__size--xs;
+  }
+}
+
+// ?? button
+.button__popover {
+  display: block;
+  width: $base__size--l;
+  height: $base__size--l;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  @include single__center;
+
+  & > mat-icon {
+    font-size: 1.1rem;
+    margin: calc(#{$base__size--xxs} + #{$base__size--xxxs}) 0 0 0;
+  }
+}
+
+// ?? popover
+.popover {
   .popover-header {
     background-color: $white;
     padding: $base__size--xs $base__size--xs 0 $base__size--xs;
+    margin: 0;
     border: none;
     font-size: 0.9rem;
   }
@@ -31,9 +61,16 @@
         & > p {
           font-size: 0.9rem;
         }
+      }
+    }
+  }
+}
 
-        // ** used in: 'quality-scale-legend'
-
+// ?? popover: 'quality-scale-legend'
+.popover.user-score__legend {
+  .popover-body {
+    & > ul {
+      & > li {
         .legend__item--good {
           background-color: green;
         }
