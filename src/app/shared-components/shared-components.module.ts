@@ -13,6 +13,7 @@ import { ButtonSecondaryComponent } from './button-secondary/button-secondary.co
 import { ButtonTertiaryComponent } from './button-tertiary/button-tertiary.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { MatIconModule } from '@angular/material/icon';
+import { QualityScaleComponent } from './quality-scale/quality-scale.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     ButtonSecondaryComponent,
     ButtonTertiaryComponent,
     IconButtonComponent,
+    QualityScaleComponent,
   ],
   imports: [CommonModule, FormsModule, MatIconModule],
   exports: [
@@ -37,6 +39,7 @@ import { MatIconModule } from '@angular/material/icon';
     ButtonSecondaryComponent,
     ButtonTertiaryComponent,
     IconButtonComponent,
+    QualityScaleComponent,
   ],
 })
 export class SharedComponentsModule {}

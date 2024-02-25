@@ -10,6 +10,5 @@
   </ul>
 
   <p>AMOUNT_OF_PARTICLES</p>
-  <!-- todo: replace with a scale from green to read to communicate decrease of quailty with increase of particles -->
-  <p>{{ data.Particles }} of 7</p>
+  <quality-scale [value]="data.Particles" />
 </div>

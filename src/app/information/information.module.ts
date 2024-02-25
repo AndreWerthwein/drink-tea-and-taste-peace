@@ -4,6 +4,7 @@ import { GeneralInformationComponent } from './general-information/general-infor
 import { PreparationComponent } from './preparation/preparation.component';
 import { AppearanceLeavesComponent } from './appearance-leaves/appearance-leaves.component';
 import { AppearanceInfusionComponent } from './appearance-infusion/appearance-infusion.component';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { AppearanceInfusionComponent } from './appearance-infusion/appearance-in
     AppearanceLeavesComponent,
     AppearanceInfusionComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedComponentsModule],
   exports: [
     GeneralInformationComponent,
     PreparationComponent,

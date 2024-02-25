@@ -10,8 +10,7 @@
   </ul>
 
   <p>AMOUNT_OF_BROKEN_LEAVES</p>
-  <!-- todo: replace with a scale from green to read to communicate decrease of quailty with increase of particles -->
-  <p>{{ data.BrokenLeaves }} of 7</p>
+  <quality-scale [value]="data.BrokenLeaves" />
 
   <p>ADDITIONAL_TEA_PARTS</p>
   <ul>
