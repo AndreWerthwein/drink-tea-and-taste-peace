@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+// translation
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+// custom modules
 import { SharedComponentsModule } from './shared-components/shared-components.module';
 import { InformationModule } from './information/information.module';
 
@@ -11,6 +17,16 @@ import { InformationModule } from './information/information.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    // translation
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    // custom modules
     SharedComponentsModule,
     InformationModule,
   ],
@@ -18,3 +34,8 @@ import { InformationModule } from './information/information.module';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

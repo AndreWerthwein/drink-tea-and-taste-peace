@@ -1,0 +1,19 @@
+{
+  "CLARITY": "Clarity",
+  "COLOR": "Color",
+  "AMOUNT_OF_PARTICLES": "Amout of particles",
+  "AVERAGE_SIZE": "Average size",
+  "AVERAGE_SHAPE": "Average shape",
+  "AMOUNT_OF_BROKEN_LEAVES": "Amount of broken leaves",
+  "ADDITIONAL_TEA_PARTS": "Additional tea parts",
+  "POWDER": "Powder",
+  "BROKEN": "Broken",
+  "CUT": "Cut",
+  "SMALL": "Small",
+  "MEDIUM": "Medium",
+  "LARGE": "Large",
+  "CLEAR": "Clear",
+  "SLIGHTLY_HAZY": "Slightly hazy",
+  "HAZY": "Hazy",
+  "OPAQUE": "Opaque"
+}

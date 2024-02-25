@@ -5,6 +5,9 @@ import { PreparationComponent } from './preparation/preparation.component';
 import { AppearanceLeavesComponent } from './appearance-leaves/appearance-leaves.component';
 import { AppearanceInfusionComponent } from './appearance-infusion/appearance-infusion.component';
 import { SharedComponentsModule } from '../shared-components/shared-components.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../app.module';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,19 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
     AppearanceLeavesComponent,
     AppearanceInfusionComponent,
   ],
-  imports: [CommonModule, SharedComponentsModule],
+  imports: [
+    CommonModule,
+    // translation
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    // custom modules
+    SharedComponentsModule,
+  ],
   exports: [
     GeneralInformationComponent,
     PreparationComponent,

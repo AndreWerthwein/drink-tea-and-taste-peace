@@ -1,0 +1,19 @@
+{
+  "CLARITY": "Klarheit",
+  "COLOR": "Farbe",
+  "AMOUNT_OF_PARTICLES": "Zahl der Partikel",
+  "AVERAGE_SIZE": "Durschnittliche Größe",
+  "AVERAGE_SHAPE": "Durchschnittliche Form",
+  "AMOUNT_OF_BROKEN_LEAVES": "Zahl der gebrochenen Blätter",
+  "ADDITIONAL_TEA_PARTS": "Zusätzliche Anteile",
+  "POWDER": "Puder",
+  "BROKEN": "Gebrochen",
+  "CUT": "Geschnitten",
+  "SMALL": "Klein",
+  "MEDIUM": "Mittel",
+  "LARGE": "Groß",
+  "CLEAR": "Klar",
+  "SLIGHTLY_HAZY": "Etwas trüb",
+  "HAZY": "Trüb",
+  "OPAQUE": "Opak"
+}

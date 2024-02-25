@@ -1,25 +1,25 @@
 <div>
-  <p>AVERAGE_SIZE</p>
-  <p>{{ data.Size }}</p>
+  <p>{{ "AVERAGE_SIZE" | translate }}</p>
+  <p>{{ data.Size | translate }}</p>
 
-  <p>AVERAGE_SHAPE</p>
+  <p>{{ "AVERAGE_SHAPE" | translate }}</p>
   <ul>
     @for(shape of data.Shape; track shape) {
-    <li>{{ shape }}</li>
+    <li>{{ shape | translate }}</li>
     }
   </ul>
 
-  <p>AMOUNT_OF_BROKEN_LEAVES</p>
+  <p>{{ "AMOUNT_OF_BROKEN_LEAVES" | translate }}</p>
   <quality-scale [value]="data.BrokenLeaves" />
 
-  <p>ADDITIONAL_TEA_PARTS</p>
+  <p>{{ "ADDITIONAL_TEA_PARTS" | translate }}</p>
   <ul>
     @for(part of data.AdditionalParts; track part) {
     <li>{{ part }}</li>
     }
   </ul>
 
-  <p>COLOR</p>
+  <p>{{ "COLOR" | translate }}</p>
   <ul>
     @for(color of data.Color; track color) {
     <li>{{ color }}</li>
