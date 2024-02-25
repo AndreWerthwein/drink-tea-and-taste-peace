@@ -1,0 +1,45 @@
+<div>
+  <p>NAME</p>
+  <p>{{ data.Name }}</p>
+
+  @if(data.SerialNumber) {
+  <p>SERIAL_NUMBER</p>
+  <p>{{ data.SerialNumber }}</p>
+  }
+
+  <p>TYPE</p>
+  <p>{{ data.Type }}</p>
+
+  <p>INGREDIENTS</p>
+  <ul>
+    @for(ingredient of data.Ingredients; track ingredient) {
+    <li>{{ ingredient }}</li>
+    }
+  </ul>
+
+  <p>BRAND</p>
+  <p>{{ data.Brand }}</p>
+
+  @if(data.Shop) {
+  <p>SHOP</p>
+  <p>{{ data.Shop }}</p>
+  } @if(data.Origin) { @if(data.Origin.Country) {
+  <p>ORIGIN_COUNTRY</p>
+  <p>{{ data.Origin.Country }}</p>
+  } @if(data.Origin.City) {
+  <p>ORIGIN_CITY</p>
+  <p>{{ data.Origin.City }}</p>
+  } @if(data.Origin.Plantation) {
+  <p>ORIGIN_PLANTATION</p>
+  <p>{{ data.Origin.Plantation }}</p>
+  } }
+
+  <p>PRICE</p>
+  <p>
+    {{ data.Price.Original ? (data.Price.Original | currency : "EUR") : "—" }}
+  </p>
+  <p>PACKAGING_SIZE</p>
+  <p>{{ data.Price.PackagingSize }}</p>
+  <p>REFERENCE_PRICE</p>
+  <p>{{ data.Price.Reference | currency : "EUR" }} / 100 g</p>
+</div>

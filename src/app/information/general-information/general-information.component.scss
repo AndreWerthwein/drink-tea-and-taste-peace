@@ -1,0 +1,43 @@
+@import "sizes";
+
+:host {
+  display: block;
+  padding: $base__size--m;
+  border-radius: $base__size--m;
+  border: thin black solid;
+
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $base__size--xs;
+
+    & > * {
+      margin: 0;
+    }
+
+    & > ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      & > li {
+        &:not(:last-child) {
+          margin-right: $base__size--xs;
+
+          &::after {
+            content: ", ";
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 576px) {
+  :host {
+    & > div {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
