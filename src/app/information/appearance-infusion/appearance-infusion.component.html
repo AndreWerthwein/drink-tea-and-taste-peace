@@ -1,0 +1,15 @@
+<div>
+  <p>CLARITY</p>
+  <p>{{ data.Clarity }}</p>
+
+  <p>Color</p>
+  <ul>
+    @for(color of data.Color; track color) {
+    <li>{{ color }}</li>
+    }
+  </ul>
+
+  <p>AMOUNT_OF_PARTICLES</p>
+  <!-- todo: replace with a scale from green to read to communicate decrease of quailty with increase of particles -->
+  <p>{{ data.Particles }} of 7</p>
+</div>

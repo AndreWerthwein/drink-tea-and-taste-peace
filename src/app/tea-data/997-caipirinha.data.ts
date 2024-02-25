@@ -1,3 +1,7 @@
+import {
+  AppearanceInfusionModel,
+  AppearanceLeavesModel,
+} from '../shared-data-models/appearance.model';
 import { GeneralInformationModel } from '../shared-data-models/general-information.model';
 import { PreparationModel } from '../shared-data-models/preparation.model';
 
@@ -25,4 +29,18 @@ export const PREPARATION: PreparationModel = {
     Time: 120,
   },
   Infusions: 1,
+};
+
+export const APPEARANCE_LEAVES: AppearanceLeavesModel = {
+  Size: 'SMALL',
+  Shape: ['Rolled', 'Twisted'],
+  BrokenLeaves: 5,
+  AdditionalParts: ['Stems'],
+  Color: ['Dark Green'],
+};
+
+export const APPEARANCE_INFUSION: AppearanceInfusionModel = {
+  Clarity: 'CLEAR',
+  Color: ['Light Green', 'Fresh Green'],
+  Particles: 5,
 };
