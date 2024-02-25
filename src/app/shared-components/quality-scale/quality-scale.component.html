@@ -1,18 +1,13 @@
-<div>
+<div [title]="'VALUE: ' + value + ' OUT_OF 7'">
   @if(value === 0) {
-  <div class="section__number--0"></div>
+  <div class="section__number--optimal"></div>
   } @else {
-  <ul>
-    @for(item of [].constructor(7); track value; let i = $index) {
-    <li
-      class="section__number--{{ i + 1 }}"
-      [class.section__state--active]="i <= value"
-    ></li>
-    }
-  </ul>
+  <div class="scale__base">
+    <section class="scale__base--values"></section>
+    <section
+      class="scale__base--overlay"
+      [style.width.%]="widthOverlay"
+    ></section>
+  </div>
   }
-
-  <p>
-    <small>{{ value }} OUT_OF 7</small>
-  </p>
 </div>

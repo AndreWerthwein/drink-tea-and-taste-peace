@@ -8,58 +8,28 @@
     justify-content: flex-start;
     align-items: center;
 
-    .section__number--0 {
-      width: calc(#{$base__size--s} * 7);
-      height: $base__size--xs;
+    &:hover {
+      cursor: help;
+    }
+
+    .section__number--optimal {
+      width: calc(#{$base__size--m} * 7);
+      height: $base__size--m;
       background-color: green;
     }
 
-    & > ul {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 0;
-
-      // todo: use more fitting color scale
-
-      .section__number--1 {
-        background-color: lightgreen;
+    .scale__base {
+      .scale__base--values {
+        width: calc(#{$base__size--m} * 7);
+        height: $base__size--m;
+        background: linear-gradient(0.25turn, green, yellow, red);
       }
 
-      .section__number--2 {
-        background-color: yellowgreen;
-      }
-
-      .section__number--3 {
-        background-color: yellow;
-      }
-
-      .section__number--4 {
-        background-color: lightcoral;
-      }
-
-      .section__number--5 {
-        background-color: coral;
-      }
-
-      .section__number--6 {
-        background-color: red;
-      }
-
-      .section__number--7 {
-        background-color: darkred;
-      }
-
-      & > li {
-        width: $base__size--s;
-        height: $base__size--xs;
-        filter: grayscale(1);
-        opacity: 0.3;
-      }
-
-      .section__state--active {
-        filter: grayscale(0);
-        opacity: 1;
+      .scale__base--overlay {
+        height: $base__size--m;
+        margin: calc(#{$base__size--m} * (-1)) 0 0 auto;
+        background-color: white; // ?? grayscale-filter
+        mix-blend-mode: saturation; // ?? grayscale-filter
       }
     }
 
