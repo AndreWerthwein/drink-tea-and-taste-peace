@@ -1,0 +1,51 @@
+@import "sizes";
+
+.popover.user-score__legend {
+  .popover-header {
+    background-color: $white;
+    padding: $base__size--xs $base__size--xs 0 $base__size--xs;
+    border: none;
+    font-size: 0.9rem;
+  }
+
+  .popover-body {
+    padding: $base__size--xxs $base__size--xs $base__size--xs $base__size--xs;
+
+    & > ul {
+      margin: 0;
+      padding: 0;
+
+      & > li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        line-height: 1;
+
+        & > div {
+          width: $base__size--xs;
+          height: $base__size--xs;
+          margin: 0 $base__size--xs 0 0;
+          border-radius: 50%;
+        }
+
+        & > p {
+          font-size: 0.9rem;
+        }
+
+        // ** used in: 'quality-scale-legend'
+
+        .legend__item--good {
+          background-color: green;
+        }
+
+        .legend__item--medium {
+          background-color: yellow;
+        }
+
+        .legend__item--bad {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

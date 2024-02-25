@@ -14,6 +14,8 @@ import { ButtonTertiaryComponent } from './button-tertiary/button-tertiary.compo
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { MatIconModule } from '@angular/material/icon';
 import { QualityScaleComponent } from './quality-scale/quality-scale.component';
+import { QualityScaleLegendComponent } from './quality-scale/quality-scale-legend/quality-scale-legend.component';
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,9 @@ import { QualityScaleComponent } from './quality-scale/quality-scale.component';
     ButtonTertiaryComponent,
     IconButtonComponent,
     QualityScaleComponent,
+    QualityScaleLegendComponent,
   ],
-  imports: [CommonModule, FormsModule, MatIconModule],
+  imports: [CommonModule, FormsModule, MatIconModule, NgbPopoverModule],
   exports: [
     SelectBoxComponent,
     EvaluationRangeComponent,

@@ -1,0 +1,21 @@
+@import "sizes";
+@import "mixins";
+
+:host {
+  display: block;
+
+  & > button {
+    display: block;
+    width: $base__size--l;
+    height: $base__size--l;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    @include single__center;
+
+    & > mat-icon {
+      font-size: 1.1rem;
+      margin: calc(#{$base__size--xxs} + #{$base__size--xxxs}) 0 0 0;
+    }
+  }
+}

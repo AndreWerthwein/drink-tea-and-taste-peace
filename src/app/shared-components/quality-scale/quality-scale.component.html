@@ -1,13 +1,16 @@
-<div [title]="'VALUE: ' + value + ' OUT_OF 7'">
+<div>
   @if(value === 0) {
-  <div class="section__number--optimal"></div>
+  <div
+    class="section__number--optimal"
+    [title]="'VALUE: ' + value + ' OUT_OF 7'"
+  ></div>
   } @else {
-  <div class="scale__base">
+  <div class="scale__base" [title]="'VALUE: ' + value + ' OUT_OF 7'">
     <section class="scale__base--values"></section>
     <section
       class="scale__base--overlay"
       [style.width.%]="widthOverlay"
     ></section>
   </div>
-  }
+  } <quality-scale-legend />
 </div>
