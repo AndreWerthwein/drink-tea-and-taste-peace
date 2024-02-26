@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 import { PreparationHelpComponent } from './preparation/preparation-help/preparation-help.component';
 import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatIconModule } from '@angular/material/icon';
+import { TeaPropertyComponent } from './tea-property/tea-property.component';
+import { TeaPropertyWithTextComponent } from './tea-property-with-text/tea-property-with-text.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppearanceLeavesComponent,
     AppearanceInfusionComponent,
     PreparationHelpComponent,
+    TeaPropertyComponent,
+    TeaPropertyWithTextComponent,
   ],
   imports: [
     CommonModule,
