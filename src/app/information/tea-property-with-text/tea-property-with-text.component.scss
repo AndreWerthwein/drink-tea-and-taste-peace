@@ -1,0 +1,49 @@
+@import "sizes";
+
+:host {
+  display: block;
+  border-radius: $base__size--m;
+  overflow: hidden;
+  border: thin black solid;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: $base__size--xs $base__size--m;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  & > div {
+    & > h6 {
+      margin: 0 $base__size--m $base__size--xs $base__size--m;
+    }
+
+    & > section {
+      padding: 0 $base__size--m $base__size--m $base__size--m;
+
+      & > p {
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 576px) {
+  :host {
+    & > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0;
+
+      & > section {
+        padding: 0 0 $base__size--m 0;
+      }
+    }
+  }
+}

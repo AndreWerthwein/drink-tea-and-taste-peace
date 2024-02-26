@@ -1,1 +1,17 @@
-<p>tea-property-with-text works!</p>
+<header>
+  <h4>{{ title | translate }}</h4>
+  <tea-property-legend [data]="legend" />
+</header>
+
+<div>
+  <radial-diagram [values]="values" />
+
+  @if(text){
+  <section>
+    <h6>{{ "COMMENT" | translate }}</h6>
+    @for(paragraph of text; track paragraph) {
+    <p [innerHTML]="paragraph"></p>
+    }
+  </section>
+  }
+</div>

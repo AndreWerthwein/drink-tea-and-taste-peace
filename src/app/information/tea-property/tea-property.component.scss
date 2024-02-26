@@ -1,0 +1,19 @@
+@import "sizes";
+
+:host {
+  display: block;
+  border-radius: $base__size--m;
+  overflow: hidden;
+  border: thin black solid;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: $base__size--xs $base__size--m;
+
+    & > * {
+      margin: 0;
+    }
+  }
+}

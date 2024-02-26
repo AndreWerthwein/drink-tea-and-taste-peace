@@ -67,7 +67,7 @@
 }
 
 // ?? popover: 'quality-scale-legend'
-.popover.user-score__legend {
+.popover {
   .popover-body {
     & > ul {
       & > li {
@@ -81,6 +81,27 @@
 
         .legend__item--bad {
           background-color: red;
+        }
+      }
+    }
+  }
+}
+
+// ?? popover: 'tea-property-legend'
+.popover {
+  .popover-body {
+    .legend__tea-property {
+      & > li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        & > p {
+          margin: 0;
+
+          &:first-child {
+            margin: 0 $base__size--xs 0 0;
+          }
         }
       }
     }

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+
+// models
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 
 @Component({

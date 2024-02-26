@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { TeaPropertyComponent } from './tea-property/tea-property.component';
 import { TeaPropertyWithTextComponent } from './tea-property-with-text/tea-property-with-text.component';
 import { RadialDiagramsModule } from '../radial-diagrams/radial-diagrams.module';
+import { TeaPropertyLegendComponent } from './tea-property-legend/tea-property-legend.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { RadialDiagramsModule } from '../radial-diagrams/radial-diagrams.module'
     PreparationHelpComponent,
     TeaPropertyComponent,
     TeaPropertyWithTextComponent,
+    TeaPropertyLegendComponent,
   ],
   imports: [
     CommonModule,
@@ -46,6 +48,8 @@ import { RadialDiagramsModule } from '../radial-diagrams/radial-diagrams.module'
     PreparationComponent,
     AppearanceLeavesComponent,
     AppearanceInfusionComponent,
+    TeaPropertyComponent,
+    TeaPropertyWithTextComponent,
   ],
 })
 export class InformationModule {}

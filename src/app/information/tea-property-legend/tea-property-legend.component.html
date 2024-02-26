@@ -1,0 +1,24 @@
+<button
+  class="button__popover"
+  [ngbPopover]="popoverContent"
+  [popoverTitle]="popoverTitle"
+  popoverClass="user-score__legend"
+  type="button"
+>
+  <mat-icon>question_mark</mat-icon>
+</button>
+
+<ng-template #popoverTitle>
+  {{ "TEA_PROPERTY_LEGEND_TITLE" | translate }}
+</ng-template>
+<ng-template #popoverContent>
+  <p>{{ "TEA_PROPERTY_LEGEND_INTRODUCTION" | translate }}</p>
+  <ul class="legend__tea-property">
+    @for(item of data; track item; let i = $index) {
+    <li>
+      <p class="comment">[{{ i }}]</p>
+      <p>{{ item | translate }}</p>
+    </li>
+    }
+  </ul>
+</ng-template>

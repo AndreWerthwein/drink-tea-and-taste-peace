@@ -1,3 +1,6 @@
-<h4>{{ title | translate }}</h4>
+<header>
+  <h4>{{ title | translate }}</h4>
+  <tea-property-legend [data]="legend" />
+</header>
 
 <radial-diagram [values]="values" />

@@ -17,5 +17,11 @@
   "HAZY": "Trüb",
   "OPAQUE": "Opak",
   "PREPARATION_HELP_TITLE": "Wie viele Aufgüsse?",
-  "PREPARATION_HELP_EXPLANATION": "Dieser Parameter ist als Anhaltspunkt dafür gedacht, wie viele Aufgüsse mit der vorgesehenen Zubereitung möglich sind, ohne dass der Tee zu viel von seinen Eigenschaften verliert. (Ich habe also aufgehört zu zählen, als ich die Qualitäten des Tees nicht mehr schmecken konnte.) Obwohl dies ein sehr subjektiver Parameter ist, gibt er uns eine Vorstellung von der Qualität des Tees."
+  "PREPARATION_HELP_EXPLANATION": "Dieser Parameter ist als Anhaltspunkt dafür gedacht, wie viele Aufgüsse mit der vorgesehenen Zubereitung möglich sind, ohne dass der Tee zu viel von seinen Eigenschaften verliert. (Ich habe also aufgehört zu zählen, als ich die Qualitäten des Tees nicht mehr schmecken konnte.) Obwohl dies ein sehr subjektiver Parameter ist, gibt er uns eine Vorstellung von der Qualität des Tees.",
+  "TEA_PROPERTY_LEGEND_TITLE": "Untersuchte Eigenschaften",
+  "TEA_PROPERTY_LEGEND_INTRODUCTION": "Die hier betrachteten Eigenschaften wurden im Uhrzeigersinn in das Diagramm eingetragen, beginnend oben in der Mitte.",
+  "MARINE": "Marine",
+  "FISH": "Fisch",
+  "SEA_AIR": "Seeluft",
+  "SEAWEED": "Seetang"
 }
