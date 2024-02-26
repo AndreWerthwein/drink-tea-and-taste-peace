@@ -1,0 +1,14 @@
+<div>
+  <p>{{ "CLARITY" | translate }}</p>
+  <p>{{ data.Clarity | translate }}</p>
+
+  <p>{{ "COLOR" | translate }}</p>
+  <ul>
+    @for(color of data.Color; track color) {
+    <li>{{ color }}</li>
+    }
+  </ul>
+
+  <p>{{ "AMOUNT_OF_PARTICLES" | translate }}</p>
+  <quality-scale [value]="data.Particles" />
+</div>

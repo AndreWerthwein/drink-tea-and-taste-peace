@@ -1,4 +1,4 @@
-import { GeneralInformationModel } from './detail-information.model';
+import { GeneralInformationModel } from './general-information.model';
 import { PreparationModel } from './preparation.model';
 import { AppearanceModel } from './appearance.model';
 import {

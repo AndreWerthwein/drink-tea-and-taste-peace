@@ -1,0 +1,29 @@
+<button
+  class="button__popover"
+  [ngbPopover]="popoverContent"
+  [popoverTitle]="popoverTitle"
+  popoverClass="user-score__legend"
+  type="button"
+>
+  <mat-icon>question_mark</mat-icon>
+</button>
+
+<ng-template #popoverTitle>QUALITY_SCALE_LEGEND_TITLE</ng-template>
+<ng-template #popoverContent>
+  <p>QUALITY_SCALE_LEGEND_INTRODUCTION</p>
+
+  <ul>
+    <li>
+      <div class="legend__item--good"></div>
+      <p>QUALITY_SCALE_LEGEND_GOOD</p>
+    </li>
+    <li>
+      <div class="legend__item--medium"></div>
+      <p>QUALITY_SCALE_LEGEND_MEDIUM</p>
+    </li>
+    <li>
+      <div class="legend__item--bad"></div>
+      <p>QUALITY_SCALE_LEGEND_BAD</p>
+    </li>
+  </ul>
+</ng-template>

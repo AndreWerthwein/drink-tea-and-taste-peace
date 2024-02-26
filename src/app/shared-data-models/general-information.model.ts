@@ -6,7 +6,7 @@ interface OriginModel {
 
 interface PriceModel {
   Original: number;
-  PackagingSize: number;
+  PackagingSize: number | string;
   Reference: number; // ?? price per 100 g
 }
 

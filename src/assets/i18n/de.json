@@ -1,0 +1,21 @@
+{
+  "CLARITY": "Klarheit",
+  "COLOR": "Farbe",
+  "AMOUNT_OF_PARTICLES": "Anzahl der Partikel",
+  "AVERAGE_SIZE": "Durschnittliche Größe",
+  "AVERAGE_SHAPE": "Durchschnittliche Form",
+  "AMOUNT_OF_BROKEN_LEAVES": "Anzahl der gebrochenen Blätter",
+  "ADDITIONAL_TEA_PARTS": "Zusätzliche Anteile",
+  "POWDER": "Puder",
+  "BROKEN": "Gebrochen",
+  "CUT": "Geschnitten",
+  "SMALL": "Klein",
+  "MEDIUM": "Mittel",
+  "LARGE": "Groß",
+  "CLEAR": "Klar",
+  "SLIGHTLY_HAZY": "Etwas trüb",
+  "HAZY": "Trüb",
+  "OPAQUE": "Opak",
+  "PREPARATION_HELP_TITLE": "Wie viele Aufgüsse?",
+  "PREPARATION_HELP_EXPLANATION": "Dieser Parameter ist als Anhaltspunkt dafür gedacht, wie viele Aufgüsse mit der vorgesehenen Zubereitung möglich sind, ohne dass der Tee zu viel von seinen Eigenschaften verliert. (Ich habe also aufgehört zu zählen, als ich die Qualitäten des Tees nicht mehr schmecken konnte.) Obwohl dies ein sehr subjektiver Parameter ist, gibt er uns eine Vorstellung von der Qualität des Tees."
+}

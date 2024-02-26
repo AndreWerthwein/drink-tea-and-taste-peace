@@ -1,0 +1,47 @@
+<div>
+  <p>TEA_LEAVES_PER_CUP</p>
+  <p>
+    {{ data.Intended.TeaLeaves.PerCup ? data.Intended.TeaLeaves.PerCup : "—" }}
+    g
+  </p>
+
+  <p>TEA_LEAVES_PER_POT</p>
+  <p>
+    {{ data.Intended.TeaLeaves.PerPot ? data.Intended.TeaLeaves.PerPot : "—" }}
+    g
+  </p>
+
+  <p>WATER_PER_CUP</p>
+  <p>{{ data.Intended.Water.PerCup ? data.Intended.Water.PerCup : "—" }} ml</p>
+
+  <p>WATER_PER_POT</p>
+  <p>{{ data.Intended.Water.PerPot ? data.Intended.Water.PerPot : "—" }} ml</p>
+
+  <p>TEMPERATURE</p>
+  <p>{{ data.Intended.Temperature }} °C</p>
+
+  <p>TIME_FOR_BREWING</p>
+  <p>{{ data.Intended.Time }} s</p>
+
+  @if (data.Adapted){ @if(data.Adapted.Time){
+  <p>INDIVIDUAL_ADAPTION</p>
+  <p>{{ data.Adapted.Time }}</p>
+  } @if(data.Adapted.Ingredients){
+  <p>ADDITIONAL_INGREDIENTS</p>
+  <ul>
+    @for(ingredient of data.Adapted.Ingredients; track ingredient) {
+    <li>{{ ingredient }}</li>
+    }
+  </ul>
+  } @if(data.Adapted.Method){
+
+  <p>SPECIAL_METHOD</p>
+  <p>{{ data.Adapted.Method }}</p>
+  } }
+
+  <p>INFUSIONS_POSSIBLE</p>
+  <section class="text__popover">
+    <p>~ {{ data.Infusions }}</p>
+    <preparation-help />
+  </section>
+</div>

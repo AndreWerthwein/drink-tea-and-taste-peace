@@ -1,5 +1,11 @@
+// bootstrap
+@import "bootstrap/scss/bootstrap"; // ?? mainly used for modals
+
 // basics
 @import "./base/reset.scss";
+
+// customizing
+@import "./customizing/bootstrap__popover--legend.scss";
 
 // typography
 @import "./base/typefaces.scss";

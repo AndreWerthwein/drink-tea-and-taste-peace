@@ -1,0 +1,16 @@
+<button
+  class="button__popover"
+  [ngbPopover]="popoverContent"
+  [popoverTitle]="popoverTitle"
+  popoverClass="user-score__legend"
+  type="button"
+>
+  <mat-icon>question_mark</mat-icon>
+</button>
+
+<ng-template #popoverTitle>
+  {{ "PREPARATION_HELP_TITLE" | translate }}
+</ng-template>
+<ng-template #popoverContent>
+  <p>{{ "PREPARATION_HELP_EXPLANATION" | translate }}</p>
+</ng-template>

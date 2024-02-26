@@ -1,0 +1,49 @@
+@import "sizes";
+
+:host {
+  display: block;
+
+  & > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > div {
+      margin: 0 $base__size--xs 0 0;
+    }
+
+    &:hover {
+      cursor: help;
+    }
+
+    .section__number--optimal {
+      width: calc(#{$base__size--m} * 7);
+      height: $base__size--m;
+      background-color: green;
+    }
+
+    .scale__base {
+      .scale__base--values {
+        width: calc(#{$base__size--m} * 7);
+        height: $base__size--m;
+        background: linear-gradient(0.25turn, green, yellow, red);
+      }
+
+      .scale__base--overlay {
+        height: $base__size--m;
+        margin: calc(#{$base__size--m} * (-1)) 0 0 auto;
+        background-color: white; // ?? grayscale-filter
+        mix-blend-mode: saturation; // ?? grayscale-filter
+      }
+    }
+
+    & > p {
+      margin: 0 0 0 $base__size--xs;
+      line-height: 1;
+
+      & > small {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
