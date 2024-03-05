@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 // custom modules
 import { SharedComponentsModule } from './shared-components/shared-components.module';
 import { RadialDiagramsModule } from './radial-diagrams/radial-diagrams.module';
-import { InformationModule } from './information/information.module';
+import { TeaEvaluationModule } from './tea-evaluation/tea-evaluation.module';
 
 // translation
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -30,7 +30,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     // custom modules
     SharedComponentsModule,
     RadialDiagramsModule,
-    InformationModule,
+    TeaEvaluationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

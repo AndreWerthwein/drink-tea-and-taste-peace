@@ -1,18 +1,20 @@
 import { EvaluationRange } from '../shared-types/evaluation.types';
 
 export interface BaseAssociationsModel {
-  Marine: EvaluationRange;
-  Nuts: EvaluationRange;
-  Spice: EvaluationRange;
-  Sweet: EvaluationRange;
-  Soap: EvaluationRange;
-  Vegetal: EvaluationRange;
-  Char: EvaluationRange;
-  Earthy: EvaluationRange;
-  Wood: EvaluationRange;
-  Floral: EvaluationRange;
-  Fruit: EvaluationRange;
-  Mineral: EvaluationRange;
+  Associations: {
+    Marine: EvaluationRange;
+    Nuts: EvaluationRange;
+    Spice: EvaluationRange;
+    Sweet: EvaluationRange;
+    Soap: EvaluationRange;
+    Vegetal: EvaluationRange;
+    Char: EvaluationRange;
+    Earthy: EvaluationRange;
+    Wood: EvaluationRange;
+    Floral: EvaluationRange;
+    Fruit: EvaluationRange;
+    Mineral: EvaluationRange;
+  };
   Comment: Array<string>;
 }
 
@@ -118,7 +120,7 @@ export interface WoodModel {
   CherryWood: EvaluationRange;
   FreshCutWood: EvaluationRange;
   Maple: EvaluationRange;
-  Pince: EvaluationRange;
+  Pine: EvaluationRange;
   SawDust: EvaluationRange;
 }
 

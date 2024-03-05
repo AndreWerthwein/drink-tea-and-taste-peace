@@ -38,11 +38,11 @@
   :host {
     & > div {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 0;
+      grid-template-columns: repeat(2, calc(50% - #{$base__size--xxs}));
+      grid-gap: $base__size--xs;
 
       & > section {
-        padding: 0 0 $base__size--m 0;
+        padding: $base__size--m;
       }
     }
   }

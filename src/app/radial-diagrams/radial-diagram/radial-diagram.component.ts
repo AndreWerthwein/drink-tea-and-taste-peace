@@ -33,7 +33,7 @@ export class RadialDiagramComponent implements OnInit {
     return Math.min(hostElement.offsetWidth, hostElement.offsetHeight);
   } // returns either 'width' or 'height' of viewport, which ever is smaller
 
-  @HostListener('window:resize')
+  // todo: @HostListener('window:resize')
   private getSizeAndOffset(): void {
     this.size = this.getSmallerSize();
     this.offsetValues = this.size * -1 - 1;

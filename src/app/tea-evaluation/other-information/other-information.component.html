@@ -1,0 +1,5 @@
+<h5>{{ "OTHER_INFORMATION" | translate }}</h5>
+
+@for(paragraph of text; track paragraph) {
+<p [innerHTML]="paragraph"></p>
+}

@@ -1,0 +1,30 @@
+@import "sizes";
+
+:host {
+  display: block;
+  padding: $base__size--m;
+
+  & > div {
+    &:not(:last-child) {
+      margin: 0 0 $base__size--xl 0;
+    }
+  }
+}
+
+// @media all and (min-width: 576px) {}
+// @media all and (min-width: 768px) {}
+
+@media all and (min-width: 1024px) {
+  :host {
+    padding: $base__size--xl;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  :host {
+    padding: $base__size--xxl;
+  }
+}
+
+// @media all and (min-width: 1920px) {}
+// @media all and (min-width: 3500px) {}

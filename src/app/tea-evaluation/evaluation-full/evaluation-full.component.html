@@ -1,0 +1,108 @@
+<h1>{{ "TEA_EVALUATION" | translate }}</h1>
+<h4>{{ "TEA_EVALUATION_SUBTITLE_INFORMATION" | translate }}</h4>
+<div class="grid__information">
+  <general-information [data]="data.GeneralInformation" />
+
+  <preparation [data]="data.Preparation" />
+
+  <appearance-leaves [data]="data.Appearance.Leaves" />
+
+  <appearance-infusion [data]="data.Appearance.Infusion" />
+  <other-information [text]="data.Comment" />
+</div>
+
+<h4>{{ "TEA_EVALUATION_SUBTITLE_BASIC_EVALUATION" | translate }}</h4>
+
+<div class="grid__basic-evaluation">
+  <tea-property
+    [title]="'Odor: Tea Leaves'"
+    [values]="getArrayOfObject(data.BaseProfile.OdorLeaves.Odor)"
+    [legend]="[]"
+  />
+
+  <tea-property
+    [title]="'Odor: Tea Infuison'"
+    [values]="getArrayOfObject(data.BaseProfile.OdorInfusion.Odor)"
+    [legend]="[]"
+  />
+
+  <tea-property-with-text
+    [title]="'Taste: Tea Infuison'"
+    [values]="getArrayOfObject(data.BaseProfile.Taste.Taste)"
+    [legend]="[]"
+    [text]="data.BaseProfile.Taste.Comment"
+  />
+
+  <tea-property-with-text
+    class="taste__tea--infusion"
+    [title]="'Taste: Associations'"
+    [values]="getArrayOfObject(data.BaseAssociations.Associations)"
+    [legend]="[]"
+    [text]="data.BaseAssociations.Comment"
+  />
+</div>
+
+<h4>{{ "TEA_EVALUATION_SUBTITLE_ASSOCIATIONS" | translate }}</h4>
+
+<div class="grid__associations">
+  <tea-property
+    [title]="'Marine'"
+    [values]="getArrayOfObject(data.DetailAssociations.Marine)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Nuts'"
+    [values]="getArrayOfObject(data.DetailAssociations.Nuts)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Spice'"
+    [values]="getArrayOfObject(data.DetailAssociations.Spice)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Sweet'"
+    [values]="getArrayOfObject(data.DetailAssociations.Sweet)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Soap'"
+    [values]="getArrayOfObject(data.DetailAssociations.Soap)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Vegetal'"
+    [values]="getArrayOfObject(data.DetailAssociations.Vegetal)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Char'"
+    [values]="getArrayOfObject(data.DetailAssociations.Char)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Earthy'"
+    [values]="getArrayOfObject(data.DetailAssociations.Earthy)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Wood'"
+    [values]="getArrayOfObject(data.DetailAssociations.Wood)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Floral'"
+    [values]="getArrayOfObject(data.DetailAssociations.Floral)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Fruit'"
+    [values]="getArrayOfObject(data.DetailAssociations.Fruit)"
+    [legend]="[]"
+  />
+  <tea-property
+    [title]="'Mineral'"
+    [values]="getArrayOfObject(data.DetailAssociations.Mineral)"
+    [legend]="[]"
+  />
+</div>

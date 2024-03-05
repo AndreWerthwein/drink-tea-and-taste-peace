@@ -15,6 +15,8 @@ import { TeaPropertyComponent } from './tea-property/tea-property.component';
 import { TeaPropertyWithTextComponent } from './tea-property-with-text/tea-property-with-text.component';
 import { RadialDiagramsModule } from '../radial-diagrams/radial-diagrams.module';
 import { TeaPropertyLegendComponent } from './tea-property-legend/tea-property-legend.component';
+import { EvaluationFullComponent } from './evaluation-full/evaluation-full.component';
+import { OtherInformationComponent } from './other-information/other-information.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { TeaPropertyLegendComponent } from './tea-property-legend/tea-property-l
     TeaPropertyComponent,
     TeaPropertyWithTextComponent,
     TeaPropertyLegendComponent,
+    EvaluationFullComponent,
+    OtherInformationComponent,
   ],
   imports: [
     CommonModule,
@@ -43,13 +47,6 @@ import { TeaPropertyLegendComponent } from './tea-property-legend/tea-property-l
     SharedComponentsModule,
     RadialDiagramsModule,
   ],
-  exports: [
-    GeneralInformationComponent,
-    PreparationComponent,
-    AppearanceLeavesComponent,
-    AppearanceInfusionComponent,
-    TeaPropertyComponent,
-    TeaPropertyWithTextComponent,
-  ],
+  exports: [EvaluationFullComponent],
 })
-export class InformationModule {}
+export class TeaEvaluationModule {}

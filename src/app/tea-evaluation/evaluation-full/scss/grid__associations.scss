@@ -1,0 +1,51 @@
+@import "sizes";
+
+:host {
+  .grid__associations {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: $base__size--xs;
+  }
+}
+
+@media all and (min-width: 576px) {
+  :host {
+    .grid__associations {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  :host {
+    .grid__associations {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// @media all and (min-width: 1024px) {}
+
+@media all and (min-width: 1366px) {
+  :host {
+    .grid__associations {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media all and (min-width: 1920px) {
+  :host {
+    .grid__associations {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+@media all and (min-width: 3500px) {
+  :host {
+    .grid__associations {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+}

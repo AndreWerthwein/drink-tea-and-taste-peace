@@ -1,0 +1,21 @@
+@import "sizes";
+
+:host {
+  display: block;
+  border-radius: $base__size--m;
+  overflow: hidden;
+  border: thin black solid;
+  padding: $base__size--xs $base__size--m $base__size--m $base__size--m;
+
+  & > h5 {
+    margin: 0 0 $base__size--xs 0;
+  }
+
+  & > p {
+    max-width: 50rem;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

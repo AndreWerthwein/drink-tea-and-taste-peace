@@ -1,0 +1,55 @@
+:host {
+  .grid__information {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: $base__size--xs;
+  }
+}
+
+// @media all and (min-width: 576px) {}
+
+@media all and (min-width: 768px) {
+  :host {
+    .grid__information {
+      grid-template-columns: repeat(2, 1fr);
+
+      & > appearance-leaves,
+      & > appearance-infusion,
+      & > other-information {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  :host {
+    .grid__information {
+      & > appearance-leaves,
+      & > appearance-infusion {
+        grid-column: unset;
+      }
+    }
+  }
+}
+
+// @media all and (min-width: 1366px) {}
+
+@media all and (min-width: 1920px) {
+  :host {
+    .grid__information {
+      grid-template-columns: repeat(3, 1fr);
+
+      & > general-information,
+      & > preparation {
+        grid-row: span 2;
+      }
+
+      & > other-information {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+// @media all and (min-width: 3500px) {}
