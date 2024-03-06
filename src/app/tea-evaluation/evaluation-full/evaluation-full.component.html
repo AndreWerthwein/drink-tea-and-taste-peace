@@ -17,19 +17,19 @@
   <tea-property
     [title]="'Odor: Tea Leaves'"
     [values]="getArrayOfObject(data.BaseProfile.OdorLeaves.Odor)"
-    [legend]="[]"
+    [legend]="legendData.BASE"
   />
 
   <tea-property
     [title]="'Odor: Tea Infuison'"
     [values]="getArrayOfObject(data.BaseProfile.OdorInfusion.Odor)"
-    [legend]="[]"
+    [legend]="legendData.BASE"
   />
 
   <tea-property-with-text
     [title]="'Taste: Tea Infuison'"
     [values]="getArrayOfObject(data.BaseProfile.Taste.Taste)"
-    [legend]="[]"
+    [legend]="legendData.BASE"
     [text]="data.BaseProfile.Taste.Comment"
   />
 
@@ -37,7 +37,7 @@
     class="taste__tea--infusion"
     [title]="'Taste: Associations'"
     [values]="getArrayOfObject(data.BaseAssociations.Associations)"
-    [legend]="[]"
+    [legend]="legendData.ASSOCIATIONS"
     [text]="data.BaseAssociations.Comment"
   />
 </div>
@@ -48,61 +48,61 @@
   <tea-property
     [title]="'Marine'"
     [values]="getArrayOfObject(data.DetailAssociations.Marine)"
-    [legend]="[]"
+    [legend]="legendData.MARINE"
   />
   <tea-property
     [title]="'Nuts'"
     [values]="getArrayOfObject(data.DetailAssociations.Nuts)"
-    [legend]="[]"
+    [legend]="legendData.NUTS"
   />
   <tea-property
     [title]="'Spice'"
     [values]="getArrayOfObject(data.DetailAssociations.Spice)"
-    [legend]="[]"
+    [legend]="legendData.SPICE"
   />
   <tea-property
     [title]="'Sweet'"
     [values]="getArrayOfObject(data.DetailAssociations.Sweet)"
-    [legend]="[]"
+    [legend]="legendData.SWEET"
   />
   <tea-property
     [title]="'Soap'"
     [values]="getArrayOfObject(data.DetailAssociations.Soap)"
-    [legend]="[]"
+    [legend]="legendData.SOAP"
   />
   <tea-property
     [title]="'Vegetal'"
     [values]="getArrayOfObject(data.DetailAssociations.Vegetal)"
-    [legend]="[]"
+    [legend]="legendData.VEGETAL"
   />
   <tea-property
     [title]="'Char'"
     [values]="getArrayOfObject(data.DetailAssociations.Char)"
-    [legend]="[]"
+    [legend]="legendData.CHAR"
   />
   <tea-property
     [title]="'Earthy'"
     [values]="getArrayOfObject(data.DetailAssociations.Earthy)"
-    [legend]="[]"
+    [legend]="legendData.EARHY"
   />
   <tea-property
     [title]="'Wood'"
     [values]="getArrayOfObject(data.DetailAssociations.Wood)"
-    [legend]="[]"
+    [legend]="legendData.WOOD"
   />
   <tea-property
     [title]="'Floral'"
     [values]="getArrayOfObject(data.DetailAssociations.Floral)"
-    [legend]="[]"
+    [legend]="legendData.FLORAL"
   />
   <tea-property
     [title]="'Fruit'"
     [values]="getArrayOfObject(data.DetailAssociations.Fruit)"
-    [legend]="[]"
+    [legend]="legendData.FRUIT"
   />
   <tea-property
     [title]="'Mineral'"
     [values]="getArrayOfObject(data.DetailAssociations.Mineral)"
-    [legend]="[]"
+    [legend]="legendData.MINERAL"
   />
 </div>

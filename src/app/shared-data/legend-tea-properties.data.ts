@@ -1,3 +1,36 @@
+export const BASE: Array<string> = [
+  'FRESH',
+  'SOUR',
+  'BITTER',
+  'DRY',
+  'HARSH',
+  'SWEET',
+  'ROASTY',
+  'SMOKY',
+  'GRASSY',
+  'EARTHY',
+  'SPICY',
+  'FRUITY',
+  'PERFUMED',
+  'OILY',
+  'UMAMI',
+];
+
+export const ASSOCIATIONS: Array<string> = [
+  'MARINE',
+  'NUTS',
+  'SPICE',
+  'SWEET',
+  'SOAP',
+  'VEGETAL',
+  'CHAR',
+  'EARTHY',
+  'WOOD',
+  'FLORAL',
+  'FRUIT',
+  'MINERAL',
+];
+
 export const MARINE: Array<string> = ['FISH', 'SEA_AIR', 'SEAWEED'];
 
 export const NUTS: Array<string> = [
@@ -35,7 +68,7 @@ export const SWEET: Array<string> = [
   'MAPLE_SYRUP',
   'MOLASSES',
   'NECTAR',
-  'TOFFE',
+  'TOFFEE',
 ];
 
 export const SOAP: Array<string> = ['BAR_SOAP', 'GINGER'];
@@ -83,4 +116,16 @@ export const EARHY: Array<string> = [
   'PEAT',
   'WET_EARTH',
   'WET_LEAVES',
+];
+
+export const WOOD: Array<string> = [];
+export const FLORAL: Array<string> = [];
+export const FRUIT: Array<string> = [];
+
+export const MINERAL: Array<string> = [
+  'BRASS',
+  'FLINT',
+  'METALLIC',
+  'SALT',
+  'WET_STONES',
 ];

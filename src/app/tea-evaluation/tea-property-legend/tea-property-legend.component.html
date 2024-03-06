@@ -13,12 +13,14 @@
 </ng-template>
 <ng-template #popoverContent>
   <p>{{ "TEA_PROPERTY_LEGEND_INTRODUCTION" | translate }}</p>
-  <ul class="legend__tea-property">
-    @for(item of data; track item; let i = $index) {
-    <li>
-      <p class="comment">[{{ i }}]</p>
-      <p>{{ item | translate }}</p>
-    </li>
-    }
-  </ul>
+  <table class="legend__tea-property">
+    <tbody>
+      @for(item of data; track item; let i = $index) {
+      <tr>
+        <td class="comment">{{ i + 1 }}.</td>
+        <td>{{ item | translate }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </ng-template>
