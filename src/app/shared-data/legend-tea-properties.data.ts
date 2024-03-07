@@ -118,9 +118,55 @@ export const EARHY: Array<string> = [
   'WET_LEAVES',
 ];
 
-export const WOOD: Array<string> = [];
-export const FLORAL: Array<string> = [];
-export const FRUIT: Array<string> = [];
+export const WOOD: Array<string> = [
+  'BARK',
+  'CAMPHOR',
+  'CEDAR',
+  'CHERRY_WOOD',
+  'FRESH_CUT_WOOD',
+  'MAPLE',
+  'PINE',
+  'SAW_DUST',
+];
+
+export const FLORAL: Array<string> = [
+  'CHERRY_BLOSSOM',
+  'JASMINE',
+  'HONEYSUCKLE',
+  'LAVENDER',
+  'ORANGE_BLOSSOM',
+  'LILAC',
+  'ORCHID',
+  'ROSE',
+];
+export const FRUIT: Array<string> = [
+  'BERRY',
+  'CITRUS',
+  'BLACK_CURRANT',
+  'GRAPEFRUIT',
+  'BLACKBERRY',
+  'LEMON',
+  'RASPBERRY',
+  'LIME',
+  'STRAWBERRY',
+  'ORANGE',
+  'YUZU',
+  'FIG',
+  'PRUNE',
+  'APRICOT',
+  'RAISIN',
+  'CHERRY',
+  'BANANA',
+  'GREEN_APPLE',
+  'LYCHEE',
+  'MUSCAT_GRAPE',
+  'MANGO',
+  'PEACH',
+  'MELON',
+  'PEAR',
+  'PINEAPPLE',
+  'PLUM',
+];
 
 export const MINERAL: Array<string> = [
   'BRASS',
