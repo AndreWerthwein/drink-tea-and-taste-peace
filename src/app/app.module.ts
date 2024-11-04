@@ -11,30 +11,22 @@ import { TeaEvaluationModule } from './tea-evaluation/tea-evaluation.module';
 // translation
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    // translation
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-    // custom modules
-    SharedComponentsModule,
-    RadialDiagramsModule,
-    TeaEvaluationModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        // custom modules
+        SharedComponentsModule,
+        RadialDiagramsModule,
+        TeaEvaluationModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
 
 // required for AOT compilation
