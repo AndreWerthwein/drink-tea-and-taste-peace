@@ -1,10 +1,10 @@
-@import "sizes";
+@use "sizes" as size;
 
 :host {
   .grid__associations {
     display: grid;
     grid-template-columns: 100%;
-    grid-gap: $base__size--xs;
+    grid-gap: size.$xs;
   }
 }
 

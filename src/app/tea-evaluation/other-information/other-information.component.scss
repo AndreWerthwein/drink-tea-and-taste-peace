@@ -1,14 +1,14 @@
-@import "sizes";
+@use "sizes" as size;
 
 :host {
   display: block;
-  border-radius: $base__size--m;
+  border-radius: size.$m;
   overflow: hidden;
   border: thin black solid;
-  padding: $base__size--xs $base__size--m $base__size--m $base__size--m;
+  padding: size.$xs size.$m size.$m size.$m;
 
   & > h5 {
-    margin: 0 0 $base__size--xs 0;
+    margin: 0 0 size.$xs 0;
   }
 
   & > p {

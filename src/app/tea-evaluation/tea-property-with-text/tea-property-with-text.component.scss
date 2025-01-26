@@ -1,8 +1,8 @@
-@import "sizes";
+@use "sizes" as size;
 
 :host {
   display: block;
-  border-radius: $base__size--m;
+  border-radius: size.$m;
   overflow: hidden;
   border: thin black solid;
 
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: $base__size--xs $base__size--m;
+    padding: size.$xs size.$m;
 
     & > * {
       margin: 0;
@@ -19,11 +19,11 @@
 
   & > div {
     & > h6 {
-      margin: 0 $base__size--m $base__size--xs $base__size--m;
+      margin: 0 size.$m size.$xs size.$m;
     }
 
     & > section {
-      padding: 0 $base__size--m $base__size--m $base__size--m;
+      padding: 0 size.$m size.$m size.$m;
 
       & > p {
         &:last-child {
@@ -38,11 +38,11 @@
   :host {
     & > div {
       display: grid;
-      grid-template-columns: repeat(2, calc(50% - #{$base__size--xxs}));
-      grid-gap: $base__size--xs;
+      grid-template-columns: repeat(2, calc(50% - #{size.$xxs}));
+      grid-gap: size.$xs;
 
       & > section {
-        padding: $base__size--m;
+        padding: size.$m;
       }
     }
   }

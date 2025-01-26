@@ -1,15 +1,15 @@
-@import "sizes";
+@use "sizes" as size;
 
 :host {
   display: block;
-  padding: $base__size--m;
-  border-radius: $base__size--m;
+  padding: size.$m;
+  border-radius: size.$m;
   border: thin black solid;
 
   & > div {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: $base__size--xs;
+    grid-gap: size.$xs;
 
     & > * {
       margin: 0;
@@ -23,7 +23,7 @@
 
       & > li {
         &:not(:last-child) {
-          margin-right: $base__size--xs;
+          margin-right: size.$xs;
 
           &::after {
             content: ", ";

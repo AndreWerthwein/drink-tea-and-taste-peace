@@ -1,7 +1,7 @@
 // base design
-@import "./scss/layout.scss";
+@use "./scss/layout.scss";
 
 // grid layouts
-@import "./scss/grid__information.scss";
-@import "./scss/grid__basic-evaluation.scss";
-@import "./scss/grid__associations.scss";
+@use "./scss/grid__information.scss";
+@use "./scss/grid__basic-evaluation.scss";
+@use "./scss/grid__associations.scss";

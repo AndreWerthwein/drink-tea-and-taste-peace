@@ -1,5 +1,5 @@
-@import "sizes";
-@import "mixins";
+@use "sizes" as size;
+@use "mixins" as mixin;
 
 * {
   font-family: "Inter Regular", Helvetica, Arial, sans-serif;
@@ -21,7 +21,7 @@ h6,
 strong {
   font-family: "Inter Bold", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  margin: 0 0 $base__size--m 0;
+  margin: 0 0 size.$m 0;
   letter-spacing: 1px;
   line-height: 1.4;
 }
@@ -40,7 +40,7 @@ h3 {
 
 h2,
 h3 {
-  margin: $base__size--xl 0 $base__size--m 0;
+  margin: size.$xl 0 size.$m 0;
 }
 
 h4 {
@@ -58,13 +58,13 @@ h6 {
 h4,
 h5,
 h6 {
-  margin: $base__size--m 0;
+  margin: size.$m 0;
 }
 
 table,
 ul,
 ol {
-  margin: $base__size--m 0;
+  margin: size.$m 0;
 }
 
 p,
@@ -76,7 +76,7 @@ td {
 
 p {
   &:not(:last-child) {
-    margin: 0 0 $base__size--xs 0;
+    margin: 0 0 size.$xs 0;
   }
 }
 
@@ -89,10 +89,10 @@ abbr {
 }
 
 hr {
-  width: calc(#{$base__size--xs} * 10);
-  height: $base__size--xs;
+  width: calc(#{size.$xs} * 10);
+  height: size.$xs;
   border: none;
-  margin: $base__size--xl auto $base__size--xl 0;
+  margin: size.$xl auto size.$xl 0;
 }
 
 a {
@@ -106,7 +106,7 @@ a {
 }
 
 blockquote {
-  margin: 0 0 $base__size--xs 0;
+  margin: 0 0 size.$xs 0;
 }
 
 blockquote,
@@ -120,7 +120,7 @@ em {
 sup {
   font-size: 0.8rem;
   position: relative;
-  top: calc((#{$base__size--xxs} + #{$base__size--xxxs}) * (-1));
+  top: calc((#{size.$xxs} + #{size.$xxxs}) * (-1));
 }
 
 footer {

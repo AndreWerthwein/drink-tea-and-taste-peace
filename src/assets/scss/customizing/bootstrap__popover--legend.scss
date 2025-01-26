@@ -1,5 +1,5 @@
-@import "sizes";
-@import "mixins";
+@use "sizes" as size;
+@use "mixins" as mixin;
 
 // ?? text
 .text__popover {
@@ -8,38 +8,38 @@
   align-items: center;
 
   & > preparation-help {
-    margin: calc(#{$base__size--xs} * (-1)) 0 0 $base__size--xs;
+    margin: calc(#{size.$xs} * (-1)) 0 0 size.$xs;
   }
 }
 
 // ?? button
 .button__popover {
   display: block;
-  width: $base__size--l;
-  height: $base__size--l;
+  width: size.$l;
+  height: size.$l;
   padding: 0;
   margin: 0;
   border-radius: 50%;
-  @include single__center;
+  @include mixin.single__center;
 
   & > mat-icon {
     font-size: 1.1rem;
-    margin: calc(#{$base__size--xxs} + #{$base__size--xxxs}) 0 0 0;
+    margin: calc(#{size.$xxs} + #{size.$xxxs}) 0 0 0;
   }
 }
 
 // ?? popover
 .popover {
   .popover-header {
-    background-color: $white;
-    padding: $base__size--xs $base__size--xs 0 $base__size--xs;
+    background-color: white;
+    padding: size.$xs size.$xs 0 size.$xs;
     margin: 0;
     border: none;
     font-size: 0.9rem;
   }
 
   .popover-body {
-    padding: $base__size--xxs $base__size--xs $base__size--xs $base__size--xs;
+    padding: size.$xxs size.$xs size.$xs size.$xs;
 
     & > ul {
       margin: 0;
@@ -52,9 +52,9 @@
         line-height: 1;
 
         & > div {
-          width: $base__size--xs;
-          height: $base__size--xs;
-          margin: 0 $base__size--xs 0 0;
+          width: size.$xs;
+          height: size.$xs;
+          margin: 0 size.$xs 0 0;
           border-radius: 50%;
         }
 
@@ -98,7 +98,7 @@
           & > td {
             &:first-child {
               text-align: right;
-              padding: 0 $base__size--xs 0 0;
+              padding: 0 size.$xs 0 0;
             }
           }
         }

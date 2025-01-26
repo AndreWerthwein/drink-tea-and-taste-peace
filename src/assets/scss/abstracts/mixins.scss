@@ -1,4 +1,4 @@
-@import "sizes";
+@use "sizes" as size;
 
 @mixin material-icons__resize($size) {
   font-size: $size;
@@ -8,10 +8,10 @@
 
 @mixin text__list {
   list-style-type: "—";
-  margin: $base__size--m 0 $base__size--m $base__size--m;
+  margin: size.$m 0 size.$m size.$m;
 
   & > li {
-    padding: 0 0 0 $base__size--xs;
+    padding: 0 0 0 size.$xs;
   }
 }
 

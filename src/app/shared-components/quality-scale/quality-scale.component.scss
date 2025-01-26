@@ -1,4 +1,4 @@
-@import "sizes";
+@use "sizes" as size;
 
 :host {
   display: block;
@@ -9,7 +9,7 @@
     align-items: center;
 
     & > div {
-      margin: 0 $base__size--xs 0 0;
+      margin: 0 size.$xs 0 0;
     }
 
     &:hover {
@@ -17,28 +17,28 @@
     }
 
     .section__number--optimal {
-      width: calc(#{$base__size--m} * 7);
-      height: $base__size--m;
+      width: calc(#{size.$m} * 7);
+      height: size.$m;
       background-color: green;
     }
 
     .scale__base {
       .scale__base--values {
-        width: calc(#{$base__size--m} * 7);
-        height: $base__size--m;
+        width: calc(#{size.$m} * 7);
+        height: size.$m;
         background: linear-gradient(0.25turn, green, yellow, red);
       }
 
       .scale__base--overlay {
-        height: $base__size--m;
-        margin: calc(#{$base__size--m} * (-1)) 0 0 auto;
+        height: size.$m;
+        margin: calc(#{size.$m} * (-1)) 0 0 auto;
         background-color: white; // ?? grayscale-filter
         mix-blend-mode: saturation; // ?? grayscale-filter
       }
     }
 
     & > p {
-      margin: 0 0 0 $base__size--xs;
+      margin: 0 0 0 size.$xs;
       line-height: 1;
 
       & > small {
