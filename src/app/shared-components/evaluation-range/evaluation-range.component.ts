@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'evaluation-range',
-  templateUrl: './evaluation-range.component.html',
-  styleUrl: './evaluation-range.component.scss',
+    selector: 'evaluation-range',
+    templateUrl: './evaluation-range.component.html',
+    styleUrl: './evaluation-range.component.scss',
+    standalone: false
 })
 export class EvaluationRangeComponent {
   @Input() label: string;

@@ -8,9 +8,10 @@ import {
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 
 @Component({
-  selector: 'quality-scale',
-  templateUrl: './quality-scale.component.html',
-  styleUrl: './quality-scale.component.scss',
+    selector: 'quality-scale',
+    templateUrl: './quality-scale.component.html',
+    styleUrl: './quality-scale.component.scss',
+    standalone: false
 })
 export class QualityScaleComponent implements OnInit, OnChanges {
   @Input() value: EvaluationRange;

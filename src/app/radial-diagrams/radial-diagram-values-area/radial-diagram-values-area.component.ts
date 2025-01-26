@@ -14,9 +14,10 @@ import {
 } from './radia-diagram-values-area.model';
 
 @Component({
-  selector: 'radial-diagram-values-area',
-  templateUrl: './radial-diagram-values-area.component.html',
-  styleUrl: './radial-diagram-values-area.component.scss',
+    selector: 'radial-diagram-values-area',
+    templateUrl: './radial-diagram-values-area.component.html',
+    styleUrl: './radial-diagram-values-area.component.scss',
+    standalone: false
 })
 export class RadialDiagramValuesAreaComponent {
   @Input() size: number;

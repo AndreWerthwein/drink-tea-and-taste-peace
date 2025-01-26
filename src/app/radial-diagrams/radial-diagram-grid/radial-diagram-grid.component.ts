@@ -13,9 +13,10 @@ import { GeometryService } from '../diagram-services/geometry.service';
 import * as diagram from '../radial-diagram/radial-diagram.data';
 
 @Component({
-  selector: 'radial-diagram-grid',
-  templateUrl: './radial-diagram-grid.component.html',
-  styleUrl: './radial-diagram-grid.component.scss',
+    selector: 'radial-diagram-grid',
+    templateUrl: './radial-diagram-grid.component.html',
+    styleUrl: './radial-diagram-grid.component.scss',
+    standalone: false
 })
 export class RadialDiagramGridComponent implements OnInit, OnChanges {
   @Input() numberOfValues: number; // ?? dictates number of segments

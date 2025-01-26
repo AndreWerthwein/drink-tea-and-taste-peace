@@ -10,9 +10,10 @@ import {
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 
 @Component({
-  selector: 'radial-diagram',
-  templateUrl: './radial-diagram.component.html',
-  styleUrl: './radial-diagram.component.scss',
+    selector: 'radial-diagram',
+    templateUrl: './radial-diagram.component.html',
+    styleUrl: './radial-diagram.component.scss',
+    standalone: false
 })
 export class RadialDiagramComponent implements OnInit {
   @Input() type: 'LINES' | 'POLYGON' | 'AREA' | undefined;

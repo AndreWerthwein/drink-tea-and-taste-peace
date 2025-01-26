@@ -16,9 +16,10 @@ import { GeometryService } from '../diagram-services/geometry.service';
 import * as diagram from '../radial-diagram/radial-diagram.data';
 
 @Component({
-  selector: 'radial-diagram-values-lines',
-  templateUrl: './radial-diagram-values-lines.component.html',
-  styleUrl: './radial-diagram-values-lines.component.scss',
+    selector: 'radial-diagram-values-lines',
+    templateUrl: './radial-diagram-values-lines.component.html',
+    styleUrl: './radial-diagram-values-lines.component.scss',
+    standalone: false
 })
 export class RadialDiagramValuesLinesComponent implements OnInit, OnChanges {
   @Input() size: number;

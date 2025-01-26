@@ -4,9 +4,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonBaseModel } from 'src/app/shared-component-models/button.model';
 
 @Component({
-  selector: 'button-secondary',
-  templateUrl: './button-secondary.component.html',
-  styleUrl: './button-secondary.component.scss',
+    selector: 'button-secondary',
+    templateUrl: './button-secondary.component.html',
+    styleUrl: './button-secondary.component.scss',
+    standalone: false
 })
 export class ButtonSecondaryComponent {
   @Input() configuration: ButtonBaseModel;

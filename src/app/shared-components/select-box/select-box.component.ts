@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'select-box',
-  templateUrl: './select-box.component.html',
-  styleUrls: ['./select-box.component.scss'],
+    selector: 'select-box',
+    templateUrl: './select-box.component.html',
+    styleUrls: ['./select-box.component.scss'],
+    standalone: false
 })
 export class SelectBoxComponent {
   @Input() label: string;

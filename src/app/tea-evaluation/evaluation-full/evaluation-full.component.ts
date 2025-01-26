@@ -8,9 +8,10 @@ import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 import * as LegendData from '../../shared-data/legend-tea-properties.data';
 
 @Component({
-  selector: 'evaluation-full',
-  templateUrl: './evaluation-full.component.html',
-  styleUrl: './evaluation-full.component.scss',
+    selector: 'evaluation-full',
+    templateUrl: './evaluation-full.component.html',
+    styleUrl: './evaluation-full.component.scss',
+    standalone: false
 })
 export class EvaluationFullComponent {
   @Input() data: FullEvaluationModel;

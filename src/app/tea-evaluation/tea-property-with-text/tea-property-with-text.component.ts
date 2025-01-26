@@ -4,9 +4,10 @@ import { Component, Input } from '@angular/core';
 import { EvaluationRange } from 'src/app/shared-types/evaluation.types';
 
 @Component({
-  selector: 'tea-property-with-text',
-  templateUrl: './tea-property-with-text.component.html',
-  styleUrl: './tea-property-with-text.component.scss',
+    selector: 'tea-property-with-text',
+    templateUrl: './tea-property-with-text.component.html',
+    styleUrl: './tea-property-with-text.component.scss',
+    standalone: false
 })
 export class TeaPropertyWithTextComponent {
   @Input() title: string;

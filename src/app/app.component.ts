@@ -4,9 +4,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { TEA_EVALUTION } from './tea-data/example.data';
 import { FullEvaluationModel } from './shared-data-models/evaluation-full.model';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   example: FullEvaluationModel;

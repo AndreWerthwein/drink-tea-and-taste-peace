@@ -10,9 +10,10 @@ import { GeometryService } from '../diagram-services/geometry.service';
 import * as diagram from '../radial-diagram/radial-diagram.data';
 
 @Component({
-  selector: 'radial-diagram-values-polygon',
-  templateUrl: './radial-diagram-values-polygon.component.html',
-  styleUrl: './radial-diagram-values-polygon.component.scss',
+    selector: 'radial-diagram-values-polygon',
+    templateUrl: './radial-diagram-values-polygon.component.html',
+    styleUrl: './radial-diagram-values-polygon.component.scss',
+    standalone: false
 })
 export class RadialDiagramValuesPolygonComponent {
   @Input() size: number;

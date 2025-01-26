@@ -4,9 +4,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { InputFieldBaseModel } from 'src/app/shared-component-models/input-fields.model';
 
 @Component({
-  selector: 'number-input',
-  templateUrl: './number-input.component.html',
-  styleUrl: './number-input.component.scss',
+    selector: 'number-input',
+    templateUrl: './number-input.component.html',
+    styleUrl: './number-input.component.scss',
+    standalone: false
 })
 export class NumberInputComponent {
   @Input() configuration: InputFieldBaseModel;

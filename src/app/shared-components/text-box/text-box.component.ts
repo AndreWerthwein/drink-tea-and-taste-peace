@@ -4,9 +4,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { InputFieldBaseModel } from 'src/app/shared-component-models/input-fields.model';
 
 @Component({
-  selector: 'text-box',
-  templateUrl: './text-box.component.html',
-  styleUrl: './text-box.component.scss',
+    selector: 'text-box',
+    templateUrl: './text-box.component.html',
+    styleUrl: './text-box.component.scss',
+    standalone: false
 })
 export class TextBoxComponent {
   @Input() configuration: InputFieldBaseModel;
